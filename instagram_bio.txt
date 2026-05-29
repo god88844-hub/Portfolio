@@ -1,0 +1,73 @@
+================================================================================
+                SPACE-THEMED INSTAGRAM BIO TEMPLATES & STRATEGY
+================================================================================
+Below are 4 high-impact, professional Instagram Bio templates tailored specifically 
+for your skills. Each template fits under the 150-character Instagram limit, 
+features your space-themed aesthetic, and directs followers to your constellations.
+--------------------------------------------------------------------------------
+
+OPTION 1: THE COSMIC ARCHITECT (Recommended - Sleek & Elite)
+--------------------------------------------------------------------------------
+🪐 Systems Builder | Mobile & Web Engineer
+📱 Codiing the digital cosmos in Flutter, Kotlin & Canvas
+🌌 Creator of Solar System Cosmos & CrowdSync
+👇 Scan my constellations:
+[Your Link Here, e.g. github.com/TejaAlla or bento.me/tejaalla]
+
+*Character Count: ~144 chars*
+
+
+OPTION 2: THE INTERSTELLAR FRONT-END DEVELOPER (Physics & UI Focused)
+--------------------------------------------------------------------------------
+🚀 Tech Architect • Mobile & Interactive Web
+☄️ Simulating the solar system in pure HTML5 & JS Canvas
+📱 Coding local-first mobile room networks
+👇 Explore the grid:
+[Your Link Here]
+
+*Character Count: ~142 chars*
+
+
+OPTION 3: THE OFFLINE GALAXY BUILDER (Offline cap & Game dev)
+--------------------------------------------------------------------------------
+🔋 Crafting robust offline-first software engines
+🎮 C#, Unity 6 & Android native synchronizations
+🌌 Twinkling space particle physics in Web Canvas
+👇 Establish connection:
+[Your Link Here]
+
+*Character Count: ~146 chars*
+
+
+OPTION 4: MINIMAL & HIGH-IMPACT (Cosmic Telemetry)
+--------------------------------------------------------------------------------
+🚀 Systems Architect // Coding the stellar web.
+📱 Custom Kotlin timing synchronization grids
+🪐 Twinkling orbital canvases & child-safe Unity games
+👇 Explore telemetry:
+[Your Link Here]
+
+*Character Count: ~140 chars*
+
+
+================================================================================
+HOW TO HOST AND LINK YOUR CONSTELLATIONS
+================================================================================
+To place these links in your Instagram bio, you have two elite options:
+
+1. FREE GITHUB PAGES PORTFOLIO (Highly Recommended)
+   - Push your custom portfolio folder (the 'index.html' we generated) to a GitHub 
+     repository named 'tejaalla.github.io' (or similar).
+   - Enable GitHub Pages in the repository settings.
+   - Your site will be live at: https://tejaalla.github.io/
+   - Put this direct link in your Instagram bio! It looks incredibly professional.
+
+2. BENTO.ME or LINKTREE (Beautiful Aggregators)
+   - Go to https://bento.me/ or https://linktr.ee/ and register a username.
+   - Bento is a sleek, modern visual grid of your links.
+   - Link:
+     * Your GitHub: https://github.com/TejaAlla
+     * Your Email: mailto:god88844@gmail.com
+     * Your Phone/WhatsApp: https://wa.me/919182531622
+     * Your resume.txt download link.
+================================================================================

@@ -1,0 +1,117 @@
+================================================================================
+                       TEJA MANI KUMAR ALLA
+================================================================================
+Visakhapatnam, Andhra Pradesh, India | god88844@gmail.com | +91 9182531622
+GitHub: github.com/TejaAlla | LinkedIn: linkedin.com/in/teja-alla-dev
+--------------------------------------------------------------------------------
+
+PROFESSIONAL SUMMARY
+Highly adaptive, forward-thinking Software Developer, Front-End Engineer & Games 
+Builder specializing in cross-platform mobile apps (Flutter, React Native), interactive 
+web engines (HTML5 Canvas, ES6+ JS), and game development (Unity 6, Unreal Engine). 
+Pioneering practitioner of AI-Assisted Software Development, leveraging advanced Large 
+Language Models (LLMs) to accelerate debugging, optimize data-structures, and ship 
+complex architectures rapidly. National-level boxing athlete bringing intense focus, 
+unwavering discipline, and competitive drive to technical engineering teams.
+
+TECHNICAL SKILLS & WORKFLOWS
+- Programming Languages: C++, Dart, Kotlin, C#, Python, ES6+ JavaScript, SQL
+- AI-Assisted Engineering: LLM-aided pair programming, advanced prompt engineering, 
+  automated code generation & auditing, rapid prototyping (Gemini, Claude, GPT)
+- Game Development: Unity 6 LTS, Unreal Engine (Blueprints & C++ integration)
+- Web & Motion: HTML5 Canvas, SVG rendering, Newtonian orbit physics, 
+  3D CSS transforms, responsive Grid & Flexbox, visual telemetry dashboards
+- Mobile ecosystems: Flutter, React Native, Expo SDK
+- Systems & Databases: Android SDK, Kotlin Native bridges, Google Nearby Connections 
+  API (star-topology networks), Hive NoSQL, SQLite, MySQL, Git/GitHub, Docker
+
+SELECTED WEB & MOBILE DEVELOPMENT
+
+1. Solar System Cosmos Simulator | Interactive Physics Web App
+   * Technology Stack: HTML5 Canvas, Modern CSS3, Pure ES6+ JS, Motion Math
+   * Core Capabilities: Built a responsive, high-performance celestial orbit 
+     mechanics simulator animating gravitational paths from scratch.
+   * Key Accomplishment: Engineered a dynamic coordinate-based particle engine 
+     supporting 1,200 twinkling space-stars, a coordinate asteroid belt driving 
+     300+ active nodes in individual orbits, and floating retro-futuristic HUDs.
+
+2. Porsche Legacy Interactive Hub & Video Deck | Automotive Fan Portal
+   * Technology Stack: HTML5, CSS3, Responsive Media Grids, Video Loop Pipelines
+   * Core Capabilities: Coded a responsive multimedia showcase portal celebrating 
+     Porsche design, racing heritage, and technological evolution.
+   * Key Accomplishment: Programmed a flexible image grid containing responsive 
+     chassis rendering cards (retro, GT2, black, blue, and red models). Coded 
+     a video-matrix container hosting 4 simultaneous looping video streams 
+     (cinematics, transitions, and road testing) with custom layout alignments.
+
+3. CrowdSync | Android-First Local Audio Synchronization Platform
+   * Technology Stack: Flutter (Dart), Kotlin Native, Google Nearby Connections
+   * Core Capabilities: Enabled multi-device local audio rooms over an offline, 
+     star-topology local Wi-Fi / hotspot network.
+   * Key Accomplishment: Engineered a custom Kotlin native timing module 
+     ("native_sync") that resolved cross-device audio latency. Developed a 
+     sub-millisecond synchronization algorithm using RTT sampling and real-time 
+     local clock offset estimates. Integrated low-level drift correction via 
+     audio micro-seeks and synchronized native hardware triggers (flashlight).
+
+4. Trinkets-Shore Luxury Showcase | High-End E-Commerce Interface
+   * Technology Stack: HTML5, CSS3 Grid & Flexbox, Micro-Animations
+   * Core Capabilities: Designed and styled a modern, responsive front-end 
+     interface for a high-end luxury jewelry boutique focusing on premium UI/UX.
+   * Key Accomplishment: Structured a semantic product gallery showcasing luxury collections. 
+     Programmed custom responsive breakpoints, fluid card hover transforms, 
+     and elegant navigation systems maintaining a sophisticated brand layout.
+
+5. FFSensiAI | AI-Powered Mobile Sensitivity Optimizer
+   * Technology Stack: React Native, Expo, JavaScript, Android SDK
+   * Core Capabilities: Built a offline gaming utility app that computes 
+     optimized sensitivity profiles for professional competitive shooters.
+   * Key Accomplishment: Engineered a fully offline mathematical engine 
+     ("ff_brain.js") to compute real-time physics and friction-based touch-response 
+     coefficients on-device without cloud API dependency or internet permissions. 
+     Authored automated deployment pipelines to compile Play Store Android App 
+     Bundles (.aab) with automatic JDK detection.
+
+6. Cosmic Space Hub & Media Portal | Multimedia Astronomy Portal
+   * Technology Stack: HTML5, CSS3 Layouts, Background Audios, Audio Stream APIs
+   * Core Capabilities: Deployed an online space library covering stellar 
+     cycles, black holes, nebulae, and integrated audio background streaming.
+   * Key Accomplishment: Coded a custom audio playback deck with a downloadable BGM 
+     stream (Khaleja sound) and structured clean responsive graphic grids.
+
+7. Number Nest | Child-Safe Educational Gaming Engine
+   * Technology Stack: Unity 6 (C#), ScriptableObjects, UI Toolkit
+   * Core Capabilities: Created a calm, progressive educational math game for 
+     children under 8, containing 100 levels across 5 themed worlds.
+   * Key Accomplishment: Formulated a secure, COPPA and Google Play Families 
+     compliant architectural loop completely free of cloud tracking, ads, or 
+     social sharing. Built a mathematical, multi-touch parental gateway to shield 
+     commercial updates, rate prompts, and a single-purchase full game unlock.
+
+8. Snap Notes | Local-First Screenshot Knowledge Manager
+   * Technology Stack: Flutter (Dart), Hive NoSQL Database, Material 3
+   * Core Capabilities: Built a secure, high-performance note-taking and 
+     checklist tool that processes, tags, and compiles screenshot metadata offline.
+   * Key Accomplishment: Developed a local-first persistent layout utilizing Hive, 
+     storing raw screenshot byte streams on-device. Designed manual transcription 
+     views and tag filters. Set up complete App Store/Play Store asset pipelines, 
+     including upload-keystore configs and privacy policies disabling cloud copies.
+
+EDUCATION
+- Sri Balaji Degree College — Bachelor's Degree (Undergraduate)  | Expected 2026
+- Alwardhas College — Intermediate Education (Completed: 2023)
+- Victory Public School — Secondary Schooling (Completed: 2020)
+
+ATHLETIC ACHIEVEMENTS & INTERSTS
+- Boxing: National-Level Competitive Boxer (Competed at National tournaments)
+- Logic & Gaming: Sudoku Expert, Logic & Puzzle Solving, Cryptographic Quizzes
+
+--------------------------------------------------------------------------------
+CONTACT & COORDINATES
+- Email: god88844@gmail.com
+- Phone: +91 9182531622
+- Address: Pendurthi, Visakhapatnam, Andhra Pradesh, India
+- GitHub Profile: github.com/TejaAlla (Update with your link)
+- LinkedIn: linkedin.com/in/teja-alla-dev (Update with your link)
+- Showcase Link: C:\Users\god88\Portfolio\index.html (Space Resume Portal)
+================================================================================
