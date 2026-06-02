@@ -1,7 +1,7 @@
 ================================================================================
                        TEJA MANI KUMAR ALLA
 ================================================================================
-Visakhapatnam, Andhra Pradesh, India | god88844@gmail.com | +91 9182531622
+Visakhapatnam, Andhra Pradesh, India | your-email@example.com | +91 XXXXX XXXXX
 GitHub: github.com/TejaAlla | LinkedIn: linkedin.com/in/teja-alla-dev
 --------------------------------------------------------------------------------
 
@@ -108,9 +108,9 @@ ATHLETIC ACHIEVEMENTS & INTERSTS
 
 --------------------------------------------------------------------------------
 CONTACT & COORDINATES
-- Email: god88844@gmail.com
-- Phone: +91 9182531622
-- Address: Pendurthi, Visakhapatnam, Andhra Pradesh, India
+- Email: your-email@example.com
+- Phone: +91 XXXXX XXXXX
+- Address: Visakhapatnam, Andhra Pradesh, India (City/State only)
 - GitHub Profile: github.com/TejaAlla (Update with your link)
 - LinkedIn: linkedin.com/in/teja-alla-dev (Update with your link)
 - Showcase Link: C:\Users\god88\Portfolio\index.html (Space Resume Portal)

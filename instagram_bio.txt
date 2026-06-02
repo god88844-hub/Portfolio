@@ -67,7 +67,7 @@ To place these links in your Instagram bio, you have two elite options:
    - Bento is a sleek, modern visual grid of your links.
    - Link:
      * Your GitHub: https://github.com/TejaAlla
-     * Your Email: mailto:god88844@gmail.com
-     * Your Phone/WhatsApp: https://wa.me/919182531622
+     * Your Email: mailto:your-email@example.com
+     * Your Phone/WhatsApp: https://wa.me/YOUR_PHONE_NUMBER
      * Your resume.txt download link.
 ================================================================================
