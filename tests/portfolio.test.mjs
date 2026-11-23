@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const html=readFileSync(new URL('../index.html', import.meta.url),'utf8');
+const cv=readFileSync(new URL('../resume.txt',import.meta.url),'utf8');
+const bio=readFileSync(new URL('../instagram_bio.txt',import.meta.url),'utf8');
+const apps=['com.ffsensiai.app','com.aimforge.aimforge_ai','com.god88.snapnotes','com.god88.tap_slice','com.god88.numbernest'];
+const repos=['god88844-hub/MEG','god88844-hub/aerodynamics-lab','god88844-hub/electrophysics-lab','god88844-hub/where-is-my-bus','god88844-hub/universal-decoder','saikumar1982/CrowdSync','saikumar1982/store','saikumar1982/Level-Up'];
+test('correct identity everywhere',()=>{for(const s of [html,cv,bio])assert.doesNotMatch(s,/github\.com\/TejaAlla|your-email@example\.com|linkedin\.com\/in\/teja-alla-dev/i);assert.match(html,/Teja ManiKumar/);assert.match(cv,/TEJA MANIKUMAR/);});
+test('five exact store listing links',()=>{for(const id of apps)assert.ok(html.includes('https://play.google.com/store/apps/details?id='+id),id);assert.equal((html.match(/class="project-card app-card /g)||[]).length,5);});
+test('eight exact repository links',()=>{for(const r of repos)assert.ok(html.includes('https://github.com/'+r),r);assert.equal((html.match(/class="project-card repo-card /g)||[]).length,8);});
+test('projects actually exploreable',()=>{for(const s of ['id="project-search"','data-filter="games"','id="tap-start"','id="tap-target"','id="screenshot-dialog"','href="demos/solar-system.html"'])assert.ok(html.includes(s),s);});
+test('media claims accurate',()=>{assert.match(html,/Illustrative product artwork/);assert.match(html,/Illustrative visual · source linked/);assert.match(html,/media\/another space img\.jpg/);assert.doesNotMatch(html,/<audio\b/);});

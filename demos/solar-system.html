@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIVERSE </title>
+    <style>
+        body { margin: 0; background: #00040a; overflow: hidden; color: #fff; font-family: 'Segoe UI', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute; top: 30px; left: 30px; 
+            border-left: 2px solid rgba(0, 255, 255, 0.5); padding-left: 20px;
+            pointer-events: none; text-transform: uppercase; letter-spacing: 3px;
+        }
+        .label { font-size: 0.7rem; opacity: 0.5; margin-bottom: 5px; }
+        .val { font-size: 1.2rem; font-weight: bold; color: #00f2ff; text-shadow: 0 0 10px #00f2ff; }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div class="label">OUR GALAXY</div>
+        <div class="val">SOLAR_SYSTEM</div>
+        <div class="label" style="margin-top: 15px;">THEME</div>
+        <div class="val" style="font-size: 0.9rem;">PLANETS</div>
+    </div>
+    <canvas id="cosmos"></canvas>
+
+<script>
+const canvas = document.getElementById('cosmos');
+const ctx = canvas.getContext('2d');
+
+let stars = [];
+let planets = [];
+let asteroids = [];
+
+const CONFIG = {
+    starCount: 1200,
+    asteroidCount: 300,
+    sunColor: '#fff500',
+    orbitScale: 0.8
+};
+
+class Star {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.5;
+        this.opacity = Math.random();
+        this.speed = Math.random() * 0.05;
+    }
+    draw() {
+        this.opacity += this.speed;
+        if (this.opacity > 1 || this.opacity < 0.2) this.speed *= -1;
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+}
+
+class Planet {
+    constructor(name, dist, size, speed, color, hasMoon = false) {
+        this.name = name;
+        this.dist = dist;
+        this.size = size;
+        this.speed = speed;
+        this.color = color;
+        this.angle = Math.random() * Math.PI * 2;
+        this.hasMoon = hasMoon;
+        this.moonAngle = 0;
+    }
+
+    update() {
+        this.angle += this.speed;
+        if (this.hasMoon) this.moonAngle += 0.05;
+    }
+
+    draw() {
+        let x = canvas.width / 2 + Math.cos(this.angle) * this.dist;
+        let y = canvas.height / 2 + Math.sin(this.angle) * this.dist;
+
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+        ctx.beginPath();
+        ctx.arc(canvas.width/2, canvas.height/2, this.dist, 0, Math.PI * 2);
+        ctx.stroke();
+
+        let grad = ctx.createRadialGradient(x, y, 0, x, y, this.size);
+        grad.addColorStop(0, this.color);
+        grad.addColorStop(1, '#000');
+        ctx.fillStyle = grad;
+        
+        ctx.beginPath();
+        ctx.arc(x, y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (this.hasMoon) {
+            let mx = x + Math.cos(this.moonAngle) * (this.size + 10);
+            let my = y + Math.sin(this.moonAngle) * (this.size + 10);
+            ctx.fillStyle = '#ddd';
+            ctx.beginPath();
+            ctx.arc(mx, my, 2, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+}
+
+function init() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    for (let i = 0; i < CONFIG.starCount; i++) stars.push(new Star());
+
+    planets.push(new Planet('Mercury', 60, 4, 0.02, '#A5A5A5'));
+    planets.push(new Planet('Venus', 90, 7, 0.015, '#E3BB76'));
+    planets.push(new Planet('Earth', 130, 8, 0.01, '#2271B3', true));
+    planets.push(new Planet('Mars', 170, 6, 0.008, '#E27B58'));
+    planets.push(new Planet('Jupiter', 240, 18, 0.004, '#D39C7E'));
+    planets.push(new Planet('Saturn', 310, 15, 0.002, '#C5AB6E'));
+
+    for (let i = 0; i < CONFIG.asteroidCount; i++) {
+        asteroids.push({
+            dist: 195 + Math.random() * 25,
+            angle: Math.random() * Math.PI * 2,
+            speed: 0.003 + Math.random() * 0.002,
+            size: Math.random() * 1.5
+        });
+    }
+}
+
+function drawSun() {
+    let cx = canvas.width / 2;
+    let cy = canvas.height / 2;
+    
+    let glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, 50);
+    glow.addColorStop(0, 'rgba(255, 200, 0, 0.3)');
+    glow.addColorStop(1, 'rgba(255, 100, 0, 0)');
+    ctx.fillStyle = glow;
+    ctx.beginPath(); ctx.arc(cx, cy, 50, 0, Math.PI * 2); ctx.fill();
+
+    ctx.fillStyle = '#fff500';
+    ctx.beginPath(); ctx.arc(cx, cy, 25, 0, Math.PI * 2); ctx.fill();
+}
+
+function animate() {
+    ctx.fillStyle = '#00040a';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    stars.forEach(s => s.draw());
+    drawSun();
+
+    ctx.fillStyle = 'rgba(200, 200, 200, 0.5)';
+    asteroids.forEach(a => {
+        a.angle += a.speed;
+        let x = canvas.width / 2 + Math.cos(a.angle) * a.dist;
+        let y = canvas.height / 2 + Math.sin(a.angle) * a.dist;
+        ctx.fillRect(x, y, a.size, a.size);
+    });
+
+    planets.forEach(p => {
+        p.update();
+        p.draw();
+    });
+
+    requestAnimationFrame(animate);
+}
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+init();
+animate();
+</script>
+</body>
+</html>
