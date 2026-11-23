@@ -953,6 +953,24 @@
 .mobile-nav-toggle{display:none;background:rgba(0,242,255,.05);border:1px solid var(--card-hover-border);border-radius:18px;color:var(--accent-neon);font:700 .85rem 'Inter',sans-serif;padding:.6rem .9rem;cursor:pointer}
 @media(max-width:600px){.mobile-nav-toggle{display:block}.nav-links.mobile-open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:65px;left:1rem;right:1rem;gap:1.1rem;padding:1.35rem;background:rgba(3,4,10,.97);border:1px solid var(--card-hover-border);border-radius:16px}.project-card{padding:1.6rem}.logo{font-size:1.1rem}.tap-game{width:100%}}
 @media(prefers-reduced-motion:reduce){.project-card:hover{transform:none}}
+
+/* Three.js gracefully overlays the original hero; original theme CSS above stays untouched. */
+.hero-graphic-card #hero-cosmos-3d{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:0;pointer-events:none;transition:opacity .5s ease;z-index:2;touch-action:pan-y;outline-offset:-3px}
+.hero-graphic-card.three-ready #hero-cosmos-3d{opacity:1;pointer-events:auto;cursor:grab}
+.hero-graphic-card.three-ready #hero-cosmos-3d:active{cursor:grabbing}
+.hero-graphic-card.three-ready #hero-cosmos{opacity:0}
+.hero-three-controls{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:end;justify-content:space-between;gap:8px;z-index:3;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.three-ready .hero-three-controls{opacity:1}
+.hero-three-hint{padding:8px 10px;color:var(--text-muted);font-size:.6rem;font-weight:700;letter-spacing:1px;background:rgba(3,4,10,.75);border:1px solid var(--card-border);border-radius:12px}
+.hero-three-buttons{display:flex;gap:6px;pointer-events:auto}
+.hero-three-buttons button{padding:8px 10px;color:var(--accent-neon);font:700 .7rem 'Inter',sans-serif;border-radius:11px;border:1px solid var(--card-hover-border);background:rgba(3,4,10,.78);cursor:pointer}
+.hero-three-buttons button:hover,.hero-three-buttons button:focus-visible{background:rgba(0,242,255,.12);outline-color:var(--accent-purple)}
+#soundtrack .bgm-icon-glowing{animation-duration:8s}
+#soundtrack .bgm-player{flex:1;min-width:min(340px,100%)}
+#soundtrack audio{min-width:200px;max-width:100%;height:48px}
+@media(max-width:600px){.hero-three-controls{left:6px;right:6px;bottom:6px}.hero-three-hint{font-size:.52rem;letter-spacing:.5px}.hero-three-buttons button{padding:6px 8px}#soundtrack .bgm-player{min-width:0;width:100%}}
+@media(prefers-reduced-motion:reduce){.hero-graphic-card #hero-cosmos-3d,.hero-three-controls{transition:none}#soundtrack .bgm-icon-glowing{animation:none}}
+
 </style>
 </head>
 <body>
@@ -998,7 +1016,12 @@
         </div>
       </div>
             <div class="hero-graphic-card">
-        <canvas id="hero-cosmos"></canvas>
+        <canvas id="hero-cosmos" aria-label="Original animated 2D solar system"></canvas>
+        <canvas id="hero-cosmos-3d" tabindex="0" aria-label="Interactive Three.js solar system. Drag or use arrow keys to orbit. Scroll to zoom."></canvas>
+        <div class="hero-three-controls" id="hero-three-controls">
+          <span class="hero-three-hint">3D ORBIT · DRAG TO EXPLORE</span>
+          <div class="hero-three-buttons"><button id="three-reset" type="button">Reset</button><button id="three-pause" type="button" aria-pressed="false">Pause</button></div>
+        </div>
       </div>
     </section>
 
@@ -1150,6 +1173,23 @@
 
     <!-- Space Background Music Player -->
     <section class="bgm-panel" id="interactive"><div class="bgm-info"><div class="bgm-icon-glowing" aria-hidden="true">🪐</div><div class="bgm-text"><span class="highlight-badge neon">INTERACTIVE EXAMPLE</span><h4>Ten-Second Tap Challenge</h4><p>A small browser experiment inspired by Tap Speed, not the complete Android game.</p><a class="project-secondary" href="https://play.google.com/store/apps/details?id=com.god88.tap_slice" target="_blank" rel="noopener noreferrer">Get the real Android game ↗</a></div></div><div class="tap-game"><div class="tap-metrics"><div><b id="tap-time">10.0</b><small>SECONDS</small></div><div><b id="tap-count">0</b><small>TAPS</small></div><div><b id="tap-rate">0.0</b><small>TAPS / SECOND</small></div></div><button id="tap-target" type="button" disabled>Press Start to play</button><button class="btn btn-primary" id="tap-start" type="button">Start Challenge</button><p class="tap-feedback" id="tap-feedback" aria-live="polite">Your reflexes, your score. No account needed.</p></div></section>
+
+
+    <!-- Restored original soundtrack: only plays when the visitor presses Play. -->
+    <section class="bgm-panel" id="soundtrack" aria-labelledby="soundtrack-title">
+      <div class="bgm-info">
+        <div class="bgm-icon-glowing" aria-hidden="true">🪐</div>
+        <div class="bgm-text"><h4 id="soundtrack-title">Deep Space Sound Stream</h4>
+          <p>Your original portfolio soundtrack is back. Play it whenever you want.</p></div>
+      </div>
+      <div class="bgm-player">
+        <audio id="cosmic-audio" controls loop preload="none" aria-label="Original portfolio soundtrack">
+          <source src="media/audio khaleja.mp3" type="audio/mpeg">
+          Your browser does not support audio playback.
+        </audio>
+        <a href="media/audio khaleja.mp3" download class="bgm-download-btn">Get Sound</a>
+      </div>
+    </section>
 
     <!-- Telemetry Coordinates -->
     <section class="contact-section" id="contact"><div class="contact-card"><h2>Establish Telemetry Connection</h2><p>Explore the real code and published apps, or follow along as the next desktop engineering tools take shape.</p><div class="contact-grid"><a href="https://github.com/god88844-hub" target="_blank" rel="noopener noreferrer" class="contact-item-btn">Primary GitHub ↗</a><a href="https://github.com/saikumar1982" target="_blank" rel="noopener noreferrer" class="contact-item-btn">Earlier Repositories ↗</a></div><p class="contact-small">Contact and support details for my Android apps are listed on Google Play.</p></div></section>
@@ -1494,6 +1534,8 @@
     }
 
     function animateHeroCosmos() {
+      // The original canvas remains the fallback until the 3D scene renders.
+      if (window.__cosmos3DActive) return;
       hctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
 
       heroStars.forEach(s => s.draw());
@@ -1568,5 +1610,6 @@
     tapTarget.addEventListener('click',()=>{if(tapTarget.disabled)return;if(performance.now()-tapStarted>=10000){renderTap();return;}taps++;tapCount.textContent=String(taps);renderTap();});
 
   </script>
+  <script type="module" src="js/cosmic-three.mjs"></script>
 </body>
 </html>
