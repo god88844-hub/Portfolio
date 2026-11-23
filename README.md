@@ -31,3 +31,14 @@ npm test
 ```
 
 The GitHub workflow runs these checks on PRs and pushes to `main`.
+
+
+## Original soundtrack and Three.js hero (2026)
+
+- Restores the existing original `media/audio khaleja.mp3` soundtrack and its original audio controls/download action. Audio starts only when the visitor presses play, and loops by user choice.
+- Adds a real 3D Three.js scene over the original solar-system hero: orbiting sphere meshes, lit planet surfaces, Saturn rings, procedural stars and an asteroid belt, with drag and zoom.
+- Preserves **the complete original CSS stylesheet byte-for-byte** and only adds scoped style declarations to the existing second stylesheet. Original page background, colors, layout, fonts and project showcase remain unchanged.
+- The original animated 2D canvas runs if Three.js is unavailable or WebGL fails; the new module is a progressive enhancement.
+- The 3D import is version-pinned and loaded via jsDelivr. Rendering is throttled offscreen and when the tab is hidden, limits pixel ratio, and respects reduced-motion preferences.
+
+The audio recording was already part of the repository; verify you have the necessary rights to distribute it, including through the download link.

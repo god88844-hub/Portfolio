@@ -4,6 +4,6 @@
   "private": true,
   "description": "Space-themed developer portfolio with direct apps, source links and interactive demos",
   "scripts": {
-    "test": "node --test tests/portfolio.test.mjs"
+    "test": "node --test"
   }
 }
