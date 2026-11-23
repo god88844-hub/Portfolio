@@ -1,101 +1,1172 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050814">
-<title>Teja ManiKumar — Apps, Games & Engineering Projects</title>
-<meta name="description" content="Teja ManiKumar builds published Android apps and games, local-first software, terminal tools and ambitious engineering simulation projects. Explore five Google Play releases, playable browser examples and public project repositories.">
-<meta name="author" content="Teja ManiKumar">
-<meta property="og:type" content="website"><meta property="og:title" content="Teja ManiKumar | Software Portfolio"><meta property="og:description" content="Published apps, playable experiments and open engineering work. Real work, real links.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{color-scheme:dark;--bg:#050814;--panel:#0b1020;--panel2:#101629;--line:rgba(159,190,231,.16);--text:#f3f7ff;--muted:#a9b6cb;--cyan:#5de6e8;--purple:#b3a1ff;--gold:#f4c976;--radius:22px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;min-width:320px;font-family:Inter,system-ui,sans-serif;background:#050814;color:var(--text);line-height:1.65;overflow-x:hidden;background-image:radial-gradient(ellipse at 74% 8%,rgba(53,72,138,.18),transparent 52%),linear-gradient(90deg,rgba(3,5,14,.94),rgba(5,9,24,.83)),url('media/another space img.jpg');background-attachment:fixed;background-size:cover;background-position:center}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 8% 60%,rgba(89,65,142,.11),transparent 40%)}a{color:inherit}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Outfit,Inter,sans-serif;line-height:1.12}img{max-width:100%}::selection{background:#1a6b78;color:white}
-#particles-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.55}.page-shell{position:relative;z-index:2}.container{width:min(1180px,calc(100% - 44px));margin-inline:auto}.skip-link{position:absolute;top:-70px;left:20px;background:var(--cyan);color:#06101b;padding:12px;z-index:1000}.skip-link:focus{top:12px}
-.topbar{height:74px;position:sticky;top:0;z-index:100;background:rgba(5,8,20,.86);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-family:Outfit,sans-serif;font-size:1.19rem;font-weight:750;letter-spacing:-.03em;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(93,230,232,.55);border-radius:50%;color:var(--cyan);font-size:21px;box-shadow:0 0 24px rgba(93,230,232,.08)}.brand em{font-style:normal;color:var(--cyan)}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{text-decoration:none;color:var(--muted);font-size:.83rem;font-weight:600}.nav-links a:hover,.nav-links a:focus-visible{color:white}.nav-links .nav-cta{padding:10px 16px;border:1px solid rgba(93,230,232,.34);border-radius:999px;color:var(--cyan)}
-.hero-section{min-height:620px;display:grid;grid-template-columns:1.04fr .96fr;gap:35px;align-items:center;padding:96px 0 75px}.eyebrow{display:inline-flex;gap:10px;align-items:center;color:var(--cyan);letter-spacing:.16em;font-size:.72rem;font-weight:800;text-transform:uppercase;margin-bottom:28px}.pulse{width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 13px var(--cyan)}.hero-title{font-size:clamp(3.25rem,6vw,6rem);font-weight:800;letter-spacing:-.065em;line-height:1.02;margin-bottom:25px}.hero-title .name{display:block;color:var(--cyan);background:linear-gradient(125deg,#ecffff 10%,#71dfee 52%,#b7a7ff 94%);background-clip:text;-webkit-background-clip:text;color:transparent}.hero-lead{font-size:clamp(1.02rem,1.5vw,1.17rem);color:#c4d0e0;max-width:550px;line-height:1.82;margin-bottom:28px}.hero-lead strong{color:white}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:12px;min-height:48px;padding:11px 21px;font-size:.86rem;font-weight:800;transition:transform .2s,border-color .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--cyan);color:#06111a}.btn-secondary{border:1px solid rgba(203,217,246,.28);background:rgba(12,18,32,.8);color:#e6edff}.hero-footnote{font-size:.75rem;color:#96a7c4;margin-top:20px}
-.orbit-card{position:relative;min-width:0;isolation:isolate;border:1px solid rgba(120,159,214,.25);background:radial-gradient(circle at 50% 46%,rgba(37,53,106,.2),transparent 60%),rgba(7,13,27,.55);border-radius:30px;aspect-ratio:1.08;overflow:hidden;box-shadow:0 20px 100px rgba(3,11,32,.45),inset 0 0 40px rgba(56,94,172,.05)}.orbit-card canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.orbital-label{position:absolute;z-index:2;top:20px;left:20px;right:20px;display:flex;justify-content:space-between;color:#b9cee5;font-size:.62rem;letter-spacing:.16em;font-weight:800;pointer-events:none}.orbital-label .live{color:var(--cyan)}.orbit-bottom{position:absolute;left:20px;right:20px;bottom:17px;z-index:2;display:flex;justify-content:space-between;gap:10px;color:#a4b6d2;font-size:.63rem;letter-spacing:.12em;pointer-events:none}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:115px}.metric{background:rgba(10,15,30,.92);padding:24px 28px;display:flex;align-items:center;gap:18px}.metric b{font-family:Outfit;font-size:2rem;color:var(--cyan);font-weight:750}.metric span{font-size:.8rem;font-weight:700;color:#b8c5d6;line-height:1.4}
-.section-head{margin:0 auto 30px;max-width:780px}.section-kicker{display:block;color:var(--cyan);text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;font-weight:800;margin-bottom:15px}.section-head h2{font-size:clamp(2rem,4.5vw,3.5rem);letter-spacing:-.045em;margin-bottom:15px}.section-head p{color:var(--muted);max-width:650px;line-height:1.8}.section-head .accent{color:var(--purple)}
-#projects{padding-bottom:95px}.toolbar{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin:35px 0 25px}.filters-container{display:flex;flex-wrap:wrap;gap:7px}.filter-btn{color:#a7b7cf;background:rgba(12,18,34,.88);border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:.76rem;font-weight:750}.filter-btn:hover,.filter-btn.active{background:rgba(93,230,232,.12);border-color:rgba(93,230,232,.53);color:var(--cyan)}.search-box{min-width:min(100%,240px);color:#a6b5c9;position:relative}.search-box input{width:100%;height:41px;background:#10172a;border:1px solid var(--line);color:#fff;border-radius:999px;padding:0 17px;font-size:.8rem}.search-box input::placeholder{color:#8fa0b5}.project-count{font-size:.75rem;color:#8fa1b8;margin-bottom:20px}
-.projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}.project-card{border:1px solid rgba(146,165,218,.18);border-radius:20px;overflow:hidden;background:linear-gradient(160deg,rgba(17,24,43,.98),rgba(9,14,28,.97));display:flex;flex-direction:column;min-width:0;transition:transform .2s,border-color .2s,box-shadow .2s}.project-card:hover{transform:translateY(-4px);border-color:rgba(93,230,232,.48);box-shadow:0 20px 48px rgba(0,0,0,.28)}.project-card[hidden]{display:none!important}.app-art,.repo-art{height:220px;position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(145deg,#12203b,#080f21)}.theme-ember .app-art,.theme-ember .repo-art{background:radial-gradient(circle at 50% 35%,rgba(255,132,45,.21),transparent 60%),#130d12}.theme-cyan .app-art,.theme-cyan .repo-art{background:radial-gradient(circle at 50% 35%,rgba(62,207,235,.16),transparent 65%),#09131f}.theme-gold .app-art,.theme-gold .repo-art{background:radial-gradient(circle at 50% 35%,rgba(239,185,85,.19),transparent 65%),#141219}.theme-sand .app-art,.theme-sand .repo-art{background:radial-gradient(circle at 50% 35%,rgba(245,191,130,.16),transparent 60%),#1b1519}.theme-lilac .app-art,.theme-violet .repo-art{background:radial-gradient(circle at 50% 35%,rgba(157,128,245,.22),transparent 60%),#101020}.art-glow{position:absolute;inset:0;background:radial-gradient(circle at 55% 88%,rgba(213,223,255,.13),transparent 55%)}.phone-frame{position:absolute;top:16px;width:109px;height:221px;border:4px solid #161c28;border-radius:16px;overflow:hidden;background:#131823;box-shadow:0 16px 26px rgba(0,0,0,.5);transition:transform .25s}.phone-frame:before{content:"";position:absolute;left:36%;top:0;width:28%;height:5px;border-radius:0 0 7px 7px;background:#0a0d15;z-index:1}.phone-frame img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}.phone-first{left:calc(50% - 113px);transform:rotate(-10deg)}.phone-second{left:calc(50% + 3px);transform:rotate(9deg)}.project-card:hover .phone-first{transform:rotate(-6deg) translateY(-5px)}.project-card:hover .phone-second{transform:rotate(5deg) translateY(-5px)}.art-caption,.visual-disclaimer{position:absolute;z-index:2;bottom:12px;left:14px;color:#c4cfe0;background:rgba(4,9,19,.72);border:1px solid rgba(255,255,255,.12);padding:4px 8px;border-radius:6px;font-size:.6rem;letter-spacing:.05em}.visual-disclaimer{bottom:auto;top:12px;color:#a9b9cc}.project-body{padding:22px;display:flex;flex-direction:column;gap:0;flex:1}.project-header{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-bottom:15px}.project-category{color:#88e9ef;font-size:.67rem;letter-spacing:.08em;font-weight:800;text-transform:uppercase}.project-status{font-size:.67rem;color:#bac9d9;white-space:nowrap}.project-status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#6cf0b0;margin-right:6px}.app-title-row{display:flex;align-items:center;gap:12px}.app-icon{width:41px;height:41px;border-radius:11px;background:#26314a;position:relative;overflow:hidden;flex:none;display:grid;place-items:center;font-family:Outfit;font-weight:800;color:#d5e2fa}.app-icon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}.project-title{font-size:1.45rem;margin:0 0 13px;letter-spacing:-.02em}.app-title-row .project-title{margin:0 0 1px}.project-desc{font-size:.82rem;color:#b2bed1;line-height:1.74;margin:15px 0 20px;flex:1}.tech-stack-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:21px}.tech-tag{border:1px solid rgba(173,198,238,.13);background:rgba(186,211,255,.045);border-radius:6px;padding:4px 8px;font-size:.67rem;color:#b9c7dd}.project-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;border-top:1px solid rgba(173,198,238,.1);padding-top:17px}.project-actions a,.project-actions button{font-size:.75rem;font-weight:800;text-decoration:none;border-radius:9px;min-height:39px;padding:8px 11px;display:inline-flex;align-items:center;justify-content:center;gap:7px}.action-primary{background:#17353f;color:#86f0f1;border:1px solid #285c67}.action-primary:hover{background:#235463}.action-secondary{background:rgba(255,255,255,.025);border:1px solid rgba(175,202,241,.22);color:#e3edff}.action-secondary:hover{background:rgba(255,255,255,.07)}
-.repo-art{display:grid;place-items:center}.terminal-preview{width:78%;margin-top:21px;border:1px solid #34536a;background:#060e1b;border-radius:10px;padding:11px 14px 15px;box-shadow:0 24px 40px #0007;color:#a8d0df;font:12px/1.45 monospace;transform:rotate(-2deg)}.terminal-dots{display:flex;gap:4px;align-items:center;border-bottom:1px solid #1b374a;padding-bottom:9px;margin-bottom:9px}.terminal-dots i{width:6px;height:6px;border-radius:50%;background:#d9aa7b}.terminal-dots i:nth-child(2){background:#e5d275}.terminal-dots i:nth-child(3){background:#61cfa4}.terminal-dots span{font-size:9px;margin-left:9px;color:#7395a7}.terminal-preview p{margin:4px 0}.terminal-preview b,.terminal-preview em{color:#5de6e8;font-style:normal}.terminal-muted{color:#5d7785}.aero-preview{position:relative;width:200px;height:170px;display:grid;place-items:center}.aero-ring{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%) rotate(-22deg);border:1px solid rgba(132,206,248,.34);border-radius:50%;width:150px;height:150px}.aero-ring.two{width:94px;height:94px;border-color:rgba(255,255,255,.16)}.aero-cross{font-size:76px;color:#b6dbea;text-shadow:0 0 20px #29b9ff}.aero-horizon{position:absolute;width:225px;height:1px;background:rgba(112,212,248,.45);transform:rotate(-12deg)}.aero-label,.chip-label{position:absolute;bottom:0;font-size:9px;letter-spacing:.2em;color:#98b0ca}.chip-preview{position:relative;display:grid;place-items:center;width:100%;height:100%;background-image:linear-gradient(#8ac8b312 1px,transparent 1px),linear-gradient(90deg,#8ac8b312 1px,transparent 1px);background-size:22px 22px}.chip-core{position:relative;z-index:1;width:112px;height:112px;border:2px solid #d7b67a;box-shadow:0 0 0 14px #bda96f1d,0 0 55px #d9a94027;background:#1b1b1a;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;font:12px monospace;color:#b1a98d}.chip-core b{font:40px Outfit;color:#f3cb80}.chip-preview .chip-label{bottom:20px}.wave-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#8de8e9}.wave-circle{width:75px;height:75px;border:1px solid #83e8ee88;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 18px #76d8eb0c}.wave-circle span{font-size:37px}.wave-lines{font:29px monospace;letter-spacing:3px;color:#64ccdd}.wave-preview>span{font-size:9px;letter-spacing:.2em}.bus-preview{display:flex;align-items:center;justify-content:center;gap:30px;width:100%;height:100%}.bus-route{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:12px;color:#e7d6b9}.bus-route span:not(.bus-route-line){width:25px;height:25px;border:1px solid #e3a974;border-radius:50%;display:grid;place-items:center}.bus-route-line{height:62px;border-left:2px dashed #e49d72}.bus-panel{display:grid;gap:12px;font-size:10px;color:#efc9ae}.bus-panel b{font-size:15px;font-family:Outfit}.bus-panel div{letter-spacing:10px;color:#ffaa83}.bus-panel i{display:inline-block;width:30px;border-top:1px dashed #e4ac90}.store-preview{width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#f1e5d5;letter-spacing:.22em}.store-shape{position:absolute;width:130px;height:130px;border:1px solid #e0baa05f;transform:rotate(45deg)}.store-gem{font-size:75px;font-weight:200;line-height:1;margin-bottom:15px}.store-preview b{font-size:12px}.store-preview small{font-size:9px;letter-spacing:.15em;margin-top:8px}.solar-preview{position:relative;width:100%;height:100%;display:grid;place-items:center}.solar-orbit{position:absolute;border:1px solid #8497c541;border-radius:50%}.solar-orbit.s1{width:90px;height:90px}.solar-orbit.s2{width:150px;height:150px}.solar-orbit.s3{width:205px;height:205px}.solar-sun{width:38px;height:38px;background:radial-gradient(circle,#fffad0,#fdd073,#c8782d);box-shadow:0 0 50px #ed9f45;border-radius:50%}.solar-planet{position:absolute;top:40px;left:51%;width:15px;height:15px;background:radial-gradient(circle,#80c8e5,#24589e);border-radius:50%}.solar-preview small{position:absolute;bottom:21px;color:#b6bedc;letter-spacing:.14em}.decoder-preview{width:78%;margin-top:19px;padding:16px;border:1px solid #376d80;border-radius:8px;background:#03111a;display:grid;gap:8px;font:12px monospace;color:#83bbc7;box-shadow:0 20px 40px #0008}.decoder-preview span{color:#5de6e8;letter-spacing:.15em;font-size:9px;border-bottom:1px solid #245063;padding-bottom:8px}.decoder-preview b{color:#b6d29a}
-.interactive-zone{padding:90px 0 105px;border-top:1px solid var(--line)}.lab-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px}.lab-card{border:1px solid rgba(93,230,232,.24);border-radius:24px;background:linear-gradient(145deg,rgba(16,28,46,.97),rgba(10,15,28,.94));padding:26px;box-shadow:0 24px 60px #0004}.lab-top{display:flex;justify-content:space-between;gap:10px;font-size:.7rem;font-weight:800;letter-spacing:.1em;color:#94bdc7;margin-bottom:24px}.tap-display{display:flex;gap:18px;justify-content:center;margin-bottom:20px}.tap-stat{text-align:center;flex:1;border:1px solid rgba(151,200,232,.16);border-radius:13px;padding:14px 6px}.tap-stat b{display:block;font:700 2rem Outfit;color:#f5fcff}.tap-stat span{font-size:.62rem;color:#9babbf;letter-spacing:.12em;text-transform:uppercase}#tap-target{display:block;width:100%;min-height:130px;border:1px solid rgba(93,230,232,.42);background:radial-gradient(circle at center,#17434b,#102531 80%);border-radius:14px;color:#c4fbfc;font-family:Outfit;font-size:1.2rem;font-weight:700;transition:transform .08s}#tap-target:active:not(:disabled){transform:scale(.98)}#tap-target:disabled{opacity:.65;cursor:default}.lab-note{font-size:.72rem;color:#96a8c2;margin-top:13px;text-align:center}#tap-start{margin-top:16px;width:100%;border:1px solid #7ce5e7;border-radius:11px;background:#74e5e9;color:#061523;padding:12px;font-weight:800}.lab-sublabel{font-size:.74rem;color:var(--gold);font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}.lab-copy h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.04em;margin-bottom:18px}.lab-copy p{color:var(--muted);line-height:1.83}.lab-copy a{display:inline-flex;margin-top:9px;color:var(--cyan);font-weight:750;text-decoration:none}.lab-copy a:hover{text-decoration:underline}
-.about-section{border-top:1px solid var(--line);padding:90px 0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.about-panel{padding:28px;background:rgba(9,15,29,.78);border:1px solid var(--line);border-radius:21px}.about-panel h3{font-size:1.45rem}.about-panel p{color:var(--muted);font-size:.86rem}.focus-list{padding:0;margin:18px 0 0;list-style:none}.focus-list li{padding:12px 0;border-top:1px solid var(--line);color:#c6d3e4;font-size:.84rem}.focus-list strong{color:#f6faff;margin-right:8px}.contact-section{padding:35px 0 105px}.contact-panel{text-align:center;background:radial-gradient(circle at top,rgba(56,139,146,.16),transparent 68%),rgba(10,17,33,.94);border:1px solid rgba(93,230,232,.2);border-radius:28px;padding:57px 25px}.contact-panel h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em}.contact-panel p{color:#aebdd0;max-width:650px;margin:0 auto 27px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.footer{border-top:1px solid var(--line);padding:27px 0 35px;color:#91a4bd;font-size:.75rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer a{color:#b2c5de;text-decoration:none}.footer a:hover{text-decoration:underline}
-dialog{border:1px solid rgba(134,205,227,.34);background:#091123;color:white;border-radius:20px;padding:0;width:min(840px,calc(100vw - 24px));max-height:90vh;box-shadow:0 28px 100px #000d}dialog::backdrop{background:rgba(0,4,14,.85);backdrop-filter:blur(8px)}.dialog-top{padding:22px 25px 13px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line)}.dialog-top h2{font-size:1.55rem;margin:0}.dialog-close{background:#1d2a3e;border:1px solid #45617c;border-radius:9px;color:white;width:37px;height:37px;font-size:23px}.dialog-copy{padding:10px 25px;font-size:.78rem;color:var(--muted)}.dialog-images{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:15px 25px 30px;max-height:56vh;overflow:auto}.dialog-images img{width:min(45%,245px);min-width:160px;object-fit:contain;max-height:50vh;border:1px solid #33465e;background:#070f1c;border-radius:12px}.dialog-actions{padding:0 25px 26px}.dialog-actions a{display:inline-flex;text-decoration:none;border-radius:8px;background:var(--cyan);color:#071323;padding:10px 17px;font-weight:800;font-size:.82rem}
-@media(max-width:990px){.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-section{min-height:auto;padding:83px 0}.hero-title{font-size:clamp(3rem,6.5vw,5.2rem)}.nav-links{gap:14px}}@media(max-width:750px){.container{width:min(100% - 30px,560px)}.topbar{height:66px}.nav-links a:not(.nav-cta){display:none}.hero-section{grid-template-columns:1fr;gap:25px;padding:55px 0 45px}.hero-title{font-size:clamp(3.1rem,11vw,5rem)}.orbit-card{max-width:530px;margin:auto;width:100%}.metrics{margin-bottom:75px}.metric{padding:16px 12px;flex-direction:column;align-items:flex-start;gap:3px}.metric b{font-size:1.65rem}.metric span{font-size:.65rem}.projects-grid{grid-template-columns:1fr}.toolbar{align-items:stretch}.filters-container{gap:7px}.filter-btn{padding:8px 12px}.search-box{width:100%}.lab-layout,.about-grid{grid-template-columns:1fr}.interactive-zone,.about-section{padding:75px 0}.lab-copy{order:-1}.project-card{max-width:600px}.app-art,.repo-art{height:236px}}@media(max-width:390px){.brand{font-size:1.04rem}.nav-links .nav-cta{padding:8px 10px;font-size:.72rem}.metric{padding:12px 9px}.metric span{font-size:.58rem}.hero-title{font-size:2.85rem}.btn{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teja ManiKumar | Apps, Games & Engineering Projects</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Teja ManiKumar publishes Android apps and games and builds terminal tools and engineering simulation software. Explore the real releases, source and interactive experiments.">
+  <meta name="keywords" content="Teja ManiKumar, Android developer, Flutter, mobile games, MEG, Aerodynamics Lab, simulation software">
+  <meta name="author" content="Teja ManiKumar">
 
-.screen-art{height:100%;width:100%;padding:12px 8px;background:linear-gradient(155deg,#142946,#0b0e1c);display:flex;align-items:center;flex-direction:column;gap:11px}.screen-art.second-art{background:linear-gradient(165deg,#122735,#131329)}.screen-top{align-self:flex-start;font-size:8px;color:#9ad9e7}.screen-hero{font-size:38px;color:#7fe6ed;text-shadow:0 0 24px #72c7e3;margin-top:5px}.screen-art i{display:block;height:12px;width:80%;border:1px solid #6baad342;background:#b5deff1c;border-radius:6px}.screen-art i:nth-of-type(2){width:73%}.screen-art i:nth-of-type(3){width:80%}.screen-art i:nth-of-type(4){width:63%}.screen-cta{background:#72dce2;color:#071526;padding:5px 8px;font-size:7px;border-radius:5px;letter-spacing:.1em;font-weight:bold}.app-icon span{font-size:14px}.dialog-hint{max-width:590px;color:#c6d4e5;text-align:center;margin:15px auto 20px;font-size:.9rem}.dialog-images{min-height:80px}
-</style></head><body><a class="skip-link" href="#main">Skip to content</a><canvas id="particles-canvas" aria-hidden="true"></canvas><div class="page-shell">
-<header class="topbar"><div class="container nav-inner"><a href="#home" class="brand"><span class="brand-mark" aria-hidden="true">✦</span>Teja <em>ManiKumar</em></a><nav class="nav-links" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#interactive">Try a demo</a><a href="#about">About</a><a class="nav-cta" href="#contact">Let's connect ↗</a></nav></div></header>
-<main id="main"><section id="home" class="hero-section container"><div class="hero-text"><div class="eyebrow"><span class="pulse"></span> Independent developer · building in public</div><h1 class="hero-title">Hi, I'm <span class="name">Teja ManiKumar.</span></h1><p class="hero-lead">I build <strong>apps people can use</strong>, games people can play, and engineering tools that explore hard problems. Five Android releases have been shared; my terminal and simulation projects are evolving in public.</p><div class="hero-buttons"><a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="https://github.com/god88844-hub" target="_blank" rel="noopener noreferrer">GitHub / source ↗</a></div><p class="hero-footnote">Illustrative artwork. Direct store listings. Public source where available.</p></div><div class="orbit-card"><div class="orbital-label"><span>TEJA / COSMIC WORKSPACE</span><span class="live">● LIVE CANVAS</span></div><canvas id="hero-cosmos" role="img" aria-label="Animated illustration of the solar system with orbiting planets"></canvas><div class="orbit-bottom"><span>ORBIT ENGINE // JAVASCRIPT</span><span>STARS &amp; PLANETS</span></div></div></section>
-<div class="container"><section class="metrics" aria-label="Portfolio overview"><div class="metric"><b>05</b><span>Apps &amp; games<br>on Google Play</span></div><div class="metric"><b>03</b><span>Desktop systems<br>&amp; simulation labs</span></div><div class="metric"><b>02</b><span>GitHub accounts<br>with public work</span></div></section></div>
-<section id="projects" class="container"><div class="section-head"><span class="section-kicker">01 / Selected work</span><h2>Not just ideas. <span class="accent">Things you can explore.</span></h2><p>Open the real store listings to see official screenshots, or inspect the repositories behind my current research and software experiments. Private app source is not misrepresented as public.</p></div><div class="toolbar"><div class="filters-container" role="group" aria-label="Filter projects"><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter-btn" data-filter="apps" aria-pressed="false">Apps</button><button type="button" class="filter-btn" data-filter="games" aria-pressed="false">Games</button><button type="button" class="filter-btn" data-filter="systems" aria-pressed="false">Systems &amp; labs</button><button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button></div><label class="search-box"><input id="project-search" type="search" autocomplete="off" placeholder="Search projects…" aria-label="Search projects"></label></div><p id="project-count" class="project-count" role="status" aria-live="polite"></p><div class="projects-grid" id="project-grid">
-<article class="project-card app-card theme-ember" data-category="apps" data-search="FF Sensi AI Gaming utility A local-first sensitivity tuning companion with device-based starting points, training feedback, and saved sessions. It helps players experiment with settings; it does not change game files or promise gameplay results. Android Offline tuning Gaming" data-id="0">
-    <div class="app-art" aria-label="Illustrated preview of FF Sensi AI">
-      <span class="art-glow"></span><div class="phone-frame phone-first"><div class="screen-art"><span class="screen-top">● ● ●</span><span class="screen-hero">✦</span><i></i><i></i><i></i><i></i><span class="screen-cta">EXPLORE</span></div></div>
-      <div class="phone-frame phone-second"><div class="screen-art second-art"><span class="screen-top">● ● ●</span><span class="screen-hero">◈</span><i></i><i></i><i></i><i></i><span class="screen-cta">DISCOVER</span></div></div>
-      <span class="art-caption">Illustrative product artwork</span>
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ----------------------------------------------------
+       Premium Space-Theme Variables & Cosmic CSS Variables
+       ---------------------------------------------------- */
+    :root {
+      --bg-dark: hsl(230, 60%, 2%);
+      --card-bg: rgba(6, 8, 20, 0.65);
+      --card-border: rgba(0, 242, 255, 0.08);
+      --card-hover-border: rgba(0, 242, 255, 0.4);
+      
+      --accent-neon: #00f2ff;       /* Space Cyan */
+      --accent-purple: #bd93f9;     /* Cosmic Violet */
+      --accent-sun: #ffcc00;        /* Stellar Gold */
+      --accent-nebula: #ff79c6;     /* Nebula Pink */
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      
+      --transition-orbit: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      /* Real space photographic background with subtle dark HSL gradient overlay */
+      background-image: linear-gradient(135deg, rgba(3, 4, 10, 0.82) 0%, rgba(5, 7, 16, 0.90) 100%), url('media/another space img.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Cosmic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 242, 255, 0.15);
+      border-radius: 8px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 242, 255, 0.45);
+      box-shadow: 0 0 10px var(--accent-neon);
+    }
+
+    /* ----------------------------------------------------
+       Twinkling Interactive Cosmos Canvas
+       ---------------------------------------------------- */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Glowing Cosmic Nebulae Blobs */
+    .bg-glow-nebula-blue {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0, 242, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+      top: -15%;
+      left: -10%;
+      z-index: 1;
+      pointer-events: none;
+      filter: blur(80px);
+    }
+
+    .bg-glow-nebula-purple {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(189, 147, 249, 0.04) 0%, rgba(0, 0, 0, 0) 70%);
+      bottom: 10%;
+      right: -10%;
+      z-index: 1;
+      pointer-events: none;
+      filter: blur(80px);
+    }
+
+    /* ----------------------------------------------------
+       Layout & Telemetry Navigation
+       ---------------------------------------------------- */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      background: rgba(3, 4, 10, 0.75);
+      border-bottom: 1px solid rgba(0, 242, 255, 0.05);
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 75px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(to right, var(--text-main), var(--accent-neon));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo span {
+      color: var(--accent-neon);
+      text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: var(--transition-orbit);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-neon);
+      box-shadow: 0 0 8px var(--accent-neon);
+      transition: var(--transition-orbit);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ----------------------------------------------------
+       Hero Section (Stellar Hub)
+       ---------------------------------------------------- */
+    .hero-section {
+      padding: 200px 0 100px 0;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-text h1 {
+      font-size: 3.8rem;
+      line-height: 1.15;
+      margin-bottom: 1.8rem;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-neon) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(0, 242, 255, 0.15);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--accent-purple);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle span.telemetry-node {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-neon);
+      box-shadow: 0 0 10px var(--accent-neon);
+      animation: blink 2s infinite;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.8rem;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      transition: var(--transition-orbit);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(0, 242, 255, 0.9) 0%, rgba(123, 97, 255, 0.9) 100%);
+      color: #03040a;
+      box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 35px rgba(0, 242, 255, 0.6);
+    }
+
+    .btn-secondary {
+      background: rgba(10, 15, 30, 0.4);
+      color: var(--text-main);
+      border: 1px solid rgba(0, 242, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 242, 255, 0.08);
+      border-color: var(--accent-neon);
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.25);
+      transform: translateY(-3px);
+    }
+
+    /* Cosmic Showcase Hero Banner */
+    .hero-graphic-card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      aspect-ratio: 1.15;
+      overflow: hidden;
+    }
+
+    .hero-graphic-card canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* ----------------------------------------------------
+       Stellar Telemetry Stats
+       ---------------------------------------------------- */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.2rem;
+      backdrop-filter: blur(15px);
+      margin-bottom: 90px;
+      box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.02);
+    }
+
+    .stat-item {
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent-neon);
+      margin-bottom: 0.2rem;
+      font-family: 'Outfit', sans-serif;
+      text-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ----------------------------------------------------
+       AI-Assisted & Athletic Highlights
+       ---------------------------------------------------- */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.2rem;
+      margin-bottom: 90px;
+    }
+
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(189, 147, 249, 0.15);
+      border-radius: 24px;
+      padding: 2.5rem;
+      backdrop-filter: blur(15px);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-orbit);
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(189, 147, 249, 0.4);
+      box-shadow: 0 10px 30px rgba(189, 147, 249, 0.1);
+    }
+
+    .highlight-badge {
+      display: inline-block;
+      background: rgba(189, 147, 249, 0.1);
+      border: 1px solid rgba(189, 147, 249, 0.2);
+      color: var(--accent-purple);
+      padding: 0.35rem 0.85rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .highlight-badge.neon {
+      background: rgba(0, 242, 255, 0.1);
+      border: 1px solid rgba(0, 242, 255, 0.2);
+      color: var(--accent-neon);
+    }
+
+    .highlight-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .highlight-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* ----------------------------------------------------
+       Astral Academy (Education Timeline)
+       ---------------------------------------------------- */
+    .education-section {
+      margin-bottom: 90px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .edu-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(15px);
+      transition: var(--transition-orbit);
+    }
+
+    .edu-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 242, 255, 0.25);
+    }
+
+    .edu-year {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-neon);
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .edu-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .edu-sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ----------------------------------------------------
+       Interactive Galaxy Showcase Grid
+       ---------------------------------------------------- */
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(to right, #ffffff, var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .filters-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(0, 242, 255, 0.1);
+      color: var(--text-muted);
+      padding: 0.65rem 1.6rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: var(--transition-orbit);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: linear-gradient(135deg, var(--accent-neon), var(--accent-purple));
+      color: #03040a;
+      border-color: transparent;
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+    }
+
+    /* Card Matrix Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+      gap: 2.2rem;
+      margin-bottom: 120px;
+    }
+
+    /* Interactive Planet Cards */
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.4rem;
+      backdrop-filter: blur(25px);
+      transition: var(--transition-orbit);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, var(--accent-neon), var(--accent-purple), var(--accent-nebula));
+      opacity: 0;
+      transition: var(--transition-orbit);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.01);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 15px 35px rgba(0, 242, 255, 0.12);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.4rem;
+    }
+
+    .project-category {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent-neon);
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    }
+
+    .project-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(0, 242, 255, 0.05);
+      padding: 0.3rem 0.7rem;
+      border-radius: 30px;
+      border: 1px solid rgba(0, 242, 255, 0.1);
+      color: var(--accent-neon);
+    }
+
+    .project-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.9rem;
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .project-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      flex-grow: 1;
+      line-height: 1.65;
+    }
+
+    .tech-stack-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tech-tag {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: var(--transition-orbit);
+    }
+
+    .project-card:hover .tech-tag {
+      border-color: rgba(0, 242, 255, 0.15);
+      background: rgba(0, 242, 255, 0.02);
+    }
+
+    .project-link-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      padding-top: 1.4rem;
+    }
+
+    .project-link {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition-orbit);
+    }
+
+    .project-link:hover {
+      color: var(--accent-neon);
+      transform: translateX(4px);
+      text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    }
+
+    /* ----------------------------------------------------
+       Space Music Player Panel
+       ---------------------------------------------------- */
+    .bgm-panel {
+      background: var(--card-bg);
+      border: 1px solid rgba(0, 242, 255, 0.1);
+      border-radius: 24px;
+      padding: 2.2rem;
+      margin-bottom: 100px;
+      backdrop-filter: blur(20px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .bgm-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .bgm-icon-glowing {
+      font-size: 2.5rem;
+      animation: rotateScale 4s infinite linear;
+      filter: drop-shadow(0 0 10px var(--accent-neon));
+    }
+
+    .bgm-text h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-main);
+    }
+
+    .bgm-text p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .bgm-player {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+
+    .bgm-player audio {
+      filter: invert(1) hue-rotate(180deg);
+      border-radius: 30px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .bgm-download-btn {
+      background: rgba(0, 242, 255, 0.05);
+      border: 1px solid rgba(0, 242, 255, 0.2);
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      color: var(--accent-neon);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: var(--transition-orbit);
+    }
+
+    .bgm-download-btn:hover {
+      background: var(--accent-neon);
+      color: #03040a;
+      box-shadow: 0 0 15px var(--accent-neon);
+    }
+
+    /* ----------------------------------------------------
+       Contact Section (Stellar Coordinates)
+       ---------------------------------------------------- */
+    .contact-section {
+      padding: 60px 0 120px 0;
+      text-align: center;
+    }
+
+    .contact-card {
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(3, 4, 10, 0.6) 100%);
+      border: 1px solid rgba(0, 242, 255, 0.1);
+      border-radius: 30px;
+      padding: 4.5rem 2rem;
+      backdrop-filter: blur(25px);
+      max-width: 850px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .contact-card::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent-neon), transparent);
+    }
+
+    .contact-card h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(0, 242, 255, 0.02);
+      border: 1px solid rgba(0, 242, 255, 0.1);
+      border-radius: 20px;
+      padding: 1.1rem 1.8rem;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: var(--transition-orbit);
+    }
+
+    .contact-item-btn:hover {
+      background: rgba(0, 242, 255, 0.06);
+      border-color: var(--accent-neon);
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .contact-item-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(0, 242, 255, 0.05);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Animations */
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes rotateScale {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    /* ----------------------------------------------------
+       Responsive Adjustments
+       ---------------------------------------------------- */
+    @media (max-width: 968px) {
+      .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 150px;
+        gap: 3.5rem;
+      }
+      
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .hero-subtitle {
+        justify-content: center;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      
+      .stat-item {
+        border-right: none;
+      }
+      
+      .stat-item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .bgm-panel {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .bgm-info {
+        flex-direction: column;
+      }
+
+      .bgm-player {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero-text h1 {
+        font-size: 2.3rem;
+      }
+
+      .stats-bar {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+<style>
+/* The entire original theme stylesheet above remains byte-for-byte unchanged.
+   All new components borrow the SAME neon-cyan, cosmic-violet, stellar-gold,
+   nebula-pink, borders, and translucent panels from the original. */
+.project-search-wrap{text-align:center;margin:-1.4rem auto 2.8rem;max-width:440px}
+.project-search-wrap label{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--accent-purple);margin-bottom:.6rem}
+#project-search{width:100%;background:var(--card-bg);border:1px solid var(--card-hover-border);color:var(--text-main);font:inherit;border-radius:40px;padding:.9rem 1.3rem;outline-offset:3px}
+#project-search:focus{outline:2px solid var(--accent-neon)}
+.project-count{margin-top:.7rem;font-size:.79rem;color:var(--text-muted)}
+.project-visual{height:147px;display:grid;place-items:center;position:relative;overflow:hidden;isolation:isolate;margin-bottom:1.5rem;border:1px solid var(--card-border);border-radius:17px;background:radial-gradient(circle at 50% 50%,rgba(0,242,255,.05),transparent 63%),rgba(3,4,10,.47)}
+.project-visual:after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.4) .7px,transparent .7px);background-size:24px 24px;opacity:.11;pointer-events:none}
+.visual-orbit{position:absolute;width:175px;height:175px;border:1px solid var(--visual-accent);opacity:.27;border-radius:50%;transform:rotate(-28deg) scaleY(.6)}
+.visual-orbit-two{width:110px;height:110px;transform:rotate(30deg) scaleY(.75)}
+.visual-glyph{position:relative;z-index:1;color:var(--visual-accent);font:800 3.1rem 'Outfit',sans-serif;text-shadow:0 0 20px var(--visual-accent);letter-spacing:.06em}
+.project-visual small{position:absolute;bottom:10px;left:12px;letter-spacing:2px;font-weight:700;font-size:.58rem;color:var(--text-muted)}
+.project-card .project-desc{margin-bottom:1.4rem}
+.project-link-group{gap:.7rem;flex-wrap:wrap}
+.details-trigger{cursor:pointer;background:transparent;border:0;padding:0;font-family:inherit}
+.project-secondary{font-size:.82rem;color:var(--accent-purple);font-weight:700;text-decoration:none;display:inline-block;margin-top:1rem}
+.project-secondary:hover{color:var(--accent-neon);text-decoration:underline}
+.project-card[hidden]{display:none!important}
+.project-note{text-align:center;color:var(--text-muted);font-size:.86rem;margin:-85px auto 105px;max-width:850px}
+.project-dialog{width:min(580px,calc(100vw - 2rem));max-height:85vh;overflow:auto;background:#060814;color:var(--text-main);border:1px solid var(--accent-neon);border-radius:24px;padding:2.4rem;box-shadow:0 15px 70px rgba(0,0,0,.85),0 0 25px rgba(0,242,255,.12)}
+.project-dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(8px)}
+.dialog-top{display:flex;align-items:center;justify-content:space-between;gap:1rem}.dialog-close{width:38px;height:38px;border-radius:50%;background:rgba(0,242,255,.05);border:1px solid var(--card-hover-border);color:var(--accent-neon);cursor:pointer}
+.project-dialog h2{margin:1.5rem 0 1rem;font-size:2rem}.project-dialog p{color:var(--text-muted);margin-bottom:1.2rem}.dialog-action{margin-top:1rem}
+.tap-game{display:flex;flex-direction:column;gap:.75rem;width:min(100%,380px)}
+.tap-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;text-align:center}
+.tap-metrics>div{padding:.55rem;background:rgba(0,242,255,.04);border:1px solid var(--card-border);border-radius:12px}
+.tap-metrics b{display:block;color:var(--accent-neon);font:800 1.5rem 'Outfit',sans-serif}.tap-metrics small{font-size:.59rem;letter-spacing:.5px;color:var(--text-muted)}
+#tap-target{height:68px;border:1px solid var(--accent-purple);background:rgba(189,147,249,.08);border-radius:16px;color:var(--text-main);font:700 1rem 'Outfit',sans-serif;cursor:pointer;touch-action:manipulation}
+#tap-target:disabled{opacity:.45;cursor:default}#tap-target:not(:disabled):active{background:rgba(0,242,255,.17)}#tap-start{border-radius:18px}
+.tap-feedback{color:var(--text-muted);font-size:.78rem;text-align:center}.contact-small{font-size:.8rem!important;margin:2rem auto 0!important}
+.mobile-nav-toggle{display:none;background:rgba(0,242,255,.05);border:1px solid var(--card-hover-border);border-radius:18px;color:var(--accent-neon);font:700 .85rem 'Inter',sans-serif;padding:.6rem .9rem;cursor:pointer}
+@media(max-width:600px){.mobile-nav-toggle{display:block}.nav-links.mobile-open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:65px;left:1rem;right:1rem;gap:1.1rem;padding:1.35rem;background:rgba(3,4,10,.97);border:1px solid var(--card-hover-border);border-radius:16px}.project-card{padding:1.6rem}.logo{font-size:1.1rem}.tap-game{width:100%}}
+@media(prefers-reduced-motion:reduce){.project-card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+  <!-- Twinkling Star Field Engine -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Nebulae Blobs -->
+  <div class="bg-glow-nebula-blue"></div>
+  <div class="bg-glow-nebula-purple"></div>
+
+  <!-- Telemetry Navigation -->
+  <header>
+    <div class="container nav-bar">
+      <a href="#" class="logo">Teja ManiKumar<span>//</span></a>
+      <ul class="nav-links" id="main-navigation">
+        <li><a href="#about">Telemetry</a></li>
+        <li><a href="#highlights">Matrix</a></li>
+        <li><a href="#projects">Constellations</a></li>
+        <li><a href="#contact">Coordinates</a></li>
+        <li><a href="resume.txt" target="_blank" style="color: var(--accent-neon);">Plain CV (TXT)</a></li>
+      </ul>
+      <button class="mobile-nav-toggle" type="button" id="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false">Menu ☰</button>
     </div>
-    <div class="project-body"><div class="project-header"><span class="project-category">Gaming utility</span><span class="project-status"><i aria-hidden="true"></i>Published</span></div>
-    <div class="app-title-row"><div class="app-icon"><span>FF</span></div><h3 class="project-title">FF Sensi AI</h3></div>
-    <p class="project-desc">A local-first sensitivity tuning companion with device-based starting points, training feedback, and saved sessions. It helps players experiment with settings; it does not change game files or promise gameplay results.</p><div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">Offline tuning</span><span class="tech-tag">Gaming</span></div>
-    <div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.ffsensiai.app">View on Google Play <span aria-hidden="true">↗</span></a><button type="button" class="action-secondary preview-btn" data-id="0" aria-label="View details and store link for FF Sensi AI">More details <span aria-hidden="true">＋</span></button></div></div></article>
-<article class="project-card app-card theme-cyan" data-category="apps" data-search="FF AI Gaming utility · AimForge project A sensitivity coaching companion with guided adjustment, loadout considerations, and natural-language guidance described in its Play Store listing. An independent settings tool, not a game modification. Android Coaching Gaming" data-id="1">
-    <div class="app-art" aria-label="Illustrated preview of FF AI">
-      <span class="art-glow"></span><div class="phone-frame phone-first"><div class="screen-art"><span class="screen-top">● ● ●</span><span class="screen-hero">✦</span><i></i><i></i><i></i><i></i><span class="screen-cta">EXPLORE</span></div></div>
-      <div class="phone-frame phone-second"><div class="screen-art second-art"><span class="screen-top">● ● ●</span><span class="screen-hero">◈</span><i></i><i></i><i></i><i></i><span class="screen-cta">DISCOVER</span></div></div>
-      <span class="art-caption">Illustrative product artwork</span>
+  </header>
+
+  <!-- Hero Space Station -->
+  <main class="container">
+    <section class="hero-section" id="about">
+      <div class="hero-text">
+        <div class="hero-subtitle">
+          <span class="telemetry-node"></span>
+          <span>ORBITAL SECTOR // FRONT-END & MOBILE SYSTEMS</span>
+        </div>
+        <h1>Teja ManiKumar. Building the Digital Cosmos.</h1>
+        <p class="hero-desc">I publish Android apps and games, build local-first software and native terminal tooling, and explore engineering simulation. Visit the real releases, source repositories, and working examples below.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" id="btn-view-projects">Scan Constellations</a>
+          <a href="resume.txt" target="_blank" class="btn btn-secondary" id="btn-download-resume">
+            <svg style="margin-right: 8px;" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            plain CV (TXT)
+          </a>
+        </div>
+      </div>
+            <div class="hero-graphic-card">
+        <canvas id="hero-cosmos"></canvas>
+      </div>
+    </section>
+
+    <!-- Telemetry Stats -->
+    <section class="stats-bar" aria-label="Project overview"><div class="stat-item"><div class="stat-num">05</div><div class="stat-label">Google Play Releases</div></div><div class="stat-item"><div class="stat-num">13</div><div class="stat-label">Featured Projects</div></div><div class="stat-item"><div class="stat-num">02</div><div class="stat-label">GitHub Accounts</div></div><div class="stat-item"><div class="stat-num">03</div><div class="stat-label">Engineering Labs &amp; Tools</div></div></section>
+
+    <!-- Personal Matrix Highlights (National Boxer & Analytical Logic) -->
+    <section id="highlights" class="highlight-grid">
+      
+      <div class="highlight-card">
+        <span class="highlight-badge">STRENGTH & FOCUS</span>
+        <h3>National-Level Boxer</h3>
+        <p>
+          Competed at the national level in boxing. This competitive athlete background brings intense focus, absolute self-discipline, swift reaction times, and high-energy drive directly into the software engineering process.
+        </p>
+      </div>
+
+      <div class="highlight-card">
+        <span class="highlight-badge neon">COGNITIVE SYSTEMS</span>
+        <h3>Analytical & Spatial Logic</h3>
+        <p>
+          Expert Sudoku solver and logic puzzle enthusiast. Possesses high-level spatial reasoning and cognitive pattern recognition capabilities, allowing rapid comprehension of complex algorithmic models and database layouts.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Astral Academy (Education Timeline) -->
+    <section class="education-section">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Astral Academy</h2>
+        <p class="section-desc">Formal education coordinates detailing degree tracking, intermediate, and secondary schooling.</p>
+      </div>
+      <div class="education-grid">
+        
+        <div class="edu-card">
+          <div class="edu-year">Undergraduate Studies</div>
+          <h4 class="edu-title">Bachelor's Degree (Undergrad)</h4>
+          <p class="edu-sub">Sri Balaji Degree College</p>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-year">Completed: 2023</div>
+          <h4 class="edu-title">Intermediate Education</h4>
+          <p class="edu-sub">Alwardhas College</p>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-year">Completed: 2020</div>
+          <h4 class="edu-title">Secondary Schooling</h4>
+          <p class="edu-sub">Victory Public School</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Portfolio Showcase (Constellations) -->
+    <section id="projects" style="padding: 40px 0;">
+ <div class="section-title-wrap"><h2 class="section-title">Project Constellations</h2><p class="section-desc">Published Android apps and games, authentic repositories and interactive experiments. Every project links to something real you can explore.</p></div>
+ <div class="filters-container" role="group" aria-label="Project categories">
+  <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Ecosystems</button>
+  <button type="button" class="filter-btn" data-filter="apps" aria-pressed="false">Mobile Apps</button>
+  <button type="button" class="filter-btn" data-filter="games" aria-pressed="false">Games</button>
+  <button type="button" class="filter-btn" data-filter="systems" aria-pressed="false">Systems &amp; Labs</button>
+  <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Stellar Web</button>
+ </div>
+ <div class="project-search-wrap"><label for="project-search">Find a constellation</label><input id="project-search" type="search" placeholder="Search projects…" autocomplete="off"><p class="project-count" id="project-count" aria-live="polite">13 projects in orbit</p></div>
+ <div class="projects-grid"><article class="project-card" data-category="apps" data-search="ff sensi ai a local-first sensitivity tuning companion with device-based starting points, training feedback, and saved sessions. it helps players experiment with settings; it does not change game files or promise gameplay results. android offline tuning gaming">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-neon)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">FF</span><small>PROJECT // APPS</small></div>
+  <div class="project-header"><span class="project-category">Gaming utility</span><span class="project-status">Published</span></div>
+  <h3 class="project-title">FF Sensi AI</h3><p class="project-desc">A local-first sensitivity tuning companion with device-based starting points, training feedback, and saved sessions. It helps players experiment with settings; it does not change game files or promise gameplay results.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">Offline tuning</span><span class="tech-tag">Gaming</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.ffsensiai.app" target="_blank" rel="noopener noreferrer">Official Google Play ↗</a><button type="button" class="project-link details-trigger" data-name="FF Sensi AI" data-summary="A local-first sensitivity tuning companion with device-based starting points, training feedback, and saved sessions. It helps players experiment with settings; it does not change game files or promise gameplay results." data-status="Published" data-url="https://play.google.com/store/apps/details?id=com.ffsensiai.app">Details +</button></div>
+</article><article class="project-card" data-category="apps" data-search="ff ai a sensitivity coaching companion with guided adjustment, loadout considerations, and natural-language guidance described in its play store listing. an independent settings tool, not a game modification. android coaching gaming">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-neon)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">AI</span><small>PROJECT // APPS</small></div>
+  <div class="project-header"><span class="project-category">Gaming utility · AimForge project</span><span class="project-status">Published</span></div>
+  <h3 class="project-title">FF AI</h3><p class="project-desc">A sensitivity coaching companion with guided adjustment, loadout considerations, and natural-language guidance described in its Play Store listing. An independent settings tool, not a game modification.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">Coaching</span><span class="tech-tag">Gaming</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.aimforge.aimforge_ai" target="_blank" rel="noopener noreferrer">Official Google Play ↗</a><button type="button" class="project-link details-trigger" data-name="FF AI" data-summary="A sensitivity coaching companion with guided adjustment, loadout considerations, and natural-language guidance described in its Play Store listing. An independent settings tool, not a game modification." data-status="Published" data-url="https://play.google.com/store/apps/details?id=com.aimforge.aimforge_ai">Details +</button></div>
+</article><article class="project-card" data-category="apps" data-search="snap notes turns screenshots into organized notes and checklists. choose an image, write what matters, add tags, and search your saved notes locally—no account or cloud backend in this release. flutter local-first notes">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-neon)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">SN</span><small>PROJECT // APPS</small></div>
+  <div class="project-header"><span class="project-category">Productivity</span><span class="project-status">Published</span></div>
+  <h3 class="project-title">Snap Notes</h3><p class="project-desc">Turns screenshots into organized notes and checklists. Choose an image, write what matters, add tags, and search your saved notes locally—no account or cloud backend in this release.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Flutter</span><span class="tech-tag">Local-first</span><span class="tech-tag">Notes</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.god88.snapnotes" target="_blank" rel="noopener noreferrer">Official Google Play ↗</a><button type="button" class="project-link details-trigger" data-name="Snap Notes" data-summary="Turns screenshots into organized notes and checklists. Choose an image, write what matters, add tags, and search your saved notes locally—no account or cloud backend in this release." data-status="Published" data-url="https://play.google.com/store/apps/details?id=com.god88.snapnotes">Details +</button></div>
+</article><article class="project-card" data-category="games" data-search="tap speed a quick-play tapping challenge: race the clock, test your reflexes, and chase a better score across time modes. try the original on google play—or the small browser challenge below. android arcade reflex">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-sun)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">TAP</span><small>PROJECT // GAMES</small></div>
+  <div class="project-header"><span class="project-category">Reflex game</span><span class="project-status">Published</span></div>
+  <h3 class="project-title">Tap Speed</h3><p class="project-desc">A quick-play tapping challenge: race the clock, test your reflexes, and chase a better score across time modes. Try the original on Google Play—or the small browser challenge below.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">Arcade</span><span class="tech-tag">Reflex</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.god88.tap_slice" target="_blank" rel="noopener noreferrer">Official Google Play ↗</a><button type="button" class="project-link details-trigger" data-name="Tap Speed" data-summary="A quick-play tapping challenge: race the clock, test your reflexes, and chase a better score across time modes. Try the original on Google Play—or the small browser challenge below." data-status="Published" data-url="https://play.google.com/store/apps/details?id=com.god88.tap_slice">Details +</button></div>
+</article><article class="project-card" data-category="games" data-search="math nest a gentle, offline early-math game for children under eight, with 100 short puzzles across five worlds covering counting, patterns, arithmetic, and number confidence. android 100 puzzles offline">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-sun)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">123</span><small>PROJECT // GAMES</small></div>
+  <div class="project-header"><span class="project-category">Educational game</span><span class="project-status">Published</span></div>
+  <h3 class="project-title">Math Nest</h3><p class="project-desc">A gentle, offline early-math game for children under eight, with 100 short puzzles across five worlds covering counting, patterns, arithmetic, and number confidence.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">100 puzzles</span><span class="tech-tag">Offline</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.god88.numbernest" target="_blank" rel="noopener noreferrer">Official Google Play ↗</a><button type="button" class="project-link details-trigger" data-name="Math Nest" data-summary="A gentle, offline early-math game for children under eight, with 100 short puzzles across five worlds covering counting, patterns, arithmetic, and number confidence." data-status="Published" data-url="https://play.google.com/store/apps/details?id=com.god88.numbernest">Details +</button></div>
+</article><article class="project-card" data-category="systems" data-search="meg · agent cli a native terminal agent harness built with rust and a bun control plane. it connects local and cloud model providers, with workspaces, sessions, tools, and explicit action modes. rust bun windows">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-purple)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">&gt;_</span><small>PROJECT // SYSTEMS</small></div>
+  <div class="project-header"><span class="project-category">Terminal software</span><span class="project-status">In development</span></div>
+  <h3 class="project-title">MEG · Agent CLI</h3><p class="project-desc">A native terminal agent harness built with Rust and a Bun control plane. It connects local and cloud model providers, with workspaces, sessions, tools, and explicit action modes.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Rust</span><span class="tech-tag">Bun</span><span class="tech-tag">Windows</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/god88844-hub/MEG" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="MEG · Agent CLI" data-summary="A native terminal agent harness built with Rust and a Bun control plane. It connects local and cloud model providers, with workspaces, sessions, tools, and explicit action modes." data-status="In development" data-url="https://github.com/god88844-hub/MEG">Details +</button></div><a class="project-secondary" href="https://github.com/god88844-hub/MEG/releases" target="_blank" rel="noopener noreferrer">Releases ↗ ↗</a>
+</article><article class="project-card" data-category="systems" data-search="aerodynamics lab a desktop engineering lab for exploring and testing flying machines. its validation-first roadmap distinguishes simulated evidence from real-world flight qualification. godot python simulation">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-purple)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">AERO</span><small>PROJECT // SYSTEMS</small></div>
+  <div class="project-header"><span class="project-category">Flight simulation</span><span class="project-status">In development</span></div>
+  <h3 class="project-title">Aerodynamics Lab</h3><p class="project-desc">A desktop engineering lab for exploring and testing flying machines. Its validation-first roadmap distinguishes simulated evidence from real-world flight qualification.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Godot</span><span class="tech-tag">Python</span><span class="tech-tag">Simulation</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/god88844-hub/aerodynamics-lab" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="Aerodynamics Lab" data-summary="A desktop engineering lab for exploring and testing flying machines. Its validation-first roadmap distinguishes simulated evidence from real-world flight qualification." data-status="In development" data-url="https://github.com/god88844-hub/aerodynamics-lab">Details +</button></div>
+</article><article class="project-card" data-category="systems" data-search="electrophysics lab an experimental environment for studying computing designs, logic, circuits, and chip concepts—with model assumptions and physical validation limits made explicit. javascript rust research">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-purple)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">∑</span><small>PROJECT // SYSTEMS</small></div>
+  <div class="project-header"><span class="project-category">Computing simulation</span><span class="project-status">Research software</span></div>
+  <h3 class="project-title">Electrophysics Lab</h3><p class="project-desc">An experimental environment for studying computing designs, logic, circuits, and chip concepts—with model assumptions and physical validation limits made explicit.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">JavaScript</span><span class="tech-tag">Rust</span><span class="tech-tag">Research</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/god88844-hub/electrophysics-lab" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="Electrophysics Lab" data-summary="An experimental environment for studying computing designs, logic, circuits, and chip concepts—with model assumptions and physical validation limits made explicit." data-status="Research software" data-url="https://github.com/god88844-hub/electrophysics-lab">Details +</button></div>
+</article><article class="project-card" data-category="systems" data-search="crowdsync android-first flutter project for synchronized audio rooms over local wi-fi or a hotspot, using nearby connections and a native kotlin timing module. flutter kotlin nearby">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-purple)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">♫</span><small>PROJECT // SYSTEMS</small></div>
+  <div class="project-header"><span class="project-category">Local audio system</span><span class="project-status">Prototype</span></div>
+  <h3 class="project-title">CrowdSync</h3><p class="project-desc">Android-first Flutter project for synchronized audio rooms over local Wi-Fi or a hotspot, using Nearby Connections and a native Kotlin timing module.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Flutter</span><span class="tech-tag">Kotlin</span><span class="tech-tag">Nearby</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/saikumar1982/CrowdSync" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="CrowdSync" data-summary="Android-first Flutter project for synchronized audio rooms over local Wi-Fi or a hotspot, using Nearby Connections and a native Kotlin timing module." data-status="Prototype" data-url="https://github.com/saikumar1982/CrowdSync">Details +</button></div>
+</article><article class="project-card" data-category="systems" data-search="where is my bus a visakhapatnam bus-tracking project organized around stops, route search, journey timelines, and an opt-in location-sharing beacon. flutter transit maps-free ui">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-purple)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">BUS</span><small>PROJECT // SYSTEMS</small></div>
+  <div class="project-header"><span class="project-category">Transit application</span><span class="project-status">In development</span></div>
+  <h3 class="project-title">Where Is My Bus</h3><p class="project-desc">A Visakhapatnam bus-tracking project organized around stops, route search, journey timelines, and an opt-in location-sharing beacon.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Flutter</span><span class="tech-tag">Transit</span><span class="tech-tag">Maps-free UI</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/god88844-hub/where-is-my-bus" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="Where Is My Bus" data-summary="A Visakhapatnam bus-tracking project organized around stops, route search, journey timelines, and an opt-in location-sharing beacon." data-status="In development" data-url="https://github.com/god88844-hub/where-is-my-bus">Details +</button></div>
+</article><article class="project-card" data-category="web" data-search="trinkets shore an early jewelry storefront experiment. inspect the actual html and assets in the public repository rather than an unrelated example site. html css storefront">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-neon)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">◇</span><small>PROJECT // WEB</small></div>
+  <div class="project-header"><span class="project-category">Web design</span><span class="project-status">Source available</span></div>
+  <h3 class="project-title">Trinkets Shore</h3><p class="project-desc">An early jewelry storefront experiment. Inspect the actual HTML and assets in the public repository rather than an unrelated example site.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Storefront</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/saikumar1982/store" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="Trinkets Shore" data-summary="An early jewelry storefront experiment. Inspect the actual HTML and assets in the public repository rather than an unrelated example site." data-status="Source available" data-url="https://github.com/saikumar1982/store">Details +</button></div><a class="project-secondary" href="https://github.com/saikumar1982/store/blob/main/trinkets.html" target="_blank" rel="noopener noreferrer">View HTML ↗ ↗</a>
+</article><article class="project-card" data-category="web" data-search="level-up experiments a collection of early interactive html experiments, including a solar-system page and an iron man-inspired page. html css javascript">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-neon)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">☉</span><small>PROJECT // WEB</small></div>
+  <div class="project-header"><span class="project-category">Web experiments</span><span class="project-status">Source available</span></div>
+  <h3 class="project-title">Level-Up Experiments</h3><p class="project-desc">A collection of early interactive HTML experiments, including a solar-system page and an Iron Man-inspired page.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/saikumar1982/Level-Up" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="Level-Up Experiments" data-summary="A collection of early interactive HTML experiments, including a solar-system page and an Iron Man-inspired page." data-status="Source available" data-url="https://github.com/saikumar1982/Level-Up">Details +</button></div><a class="project-secondary" href="demos/solar-system.html" target="_blank" rel="noopener noreferrer">Launch solar demo ↗ ↗</a>
+</article><article class="project-card" data-category="systems" data-search="universal decoder a research repository with model-file inspection tools and a separate elicitation pipeline. the documentation explicitly states what has—and has not—been demonstrated. python model inspection research">
+  <div class="project-visual" aria-label="Decorative cosmic illustration, not an app screenshot" style="--visual-accent:var(--accent-purple)"><span class="visual-orbit visual-orbit-one"></span><span class="visual-orbit visual-orbit-two"></span><span class="visual-glyph">01</span><small>PROJECT // SYSTEMS</small></div>
+  <div class="project-header"><span class="project-category">AI research</span><span class="project-status">Research · ongoing</span></div>
+  <h3 class="project-title">Universal Decoder</h3><p class="project-desc">A research repository with model-file inspection tools and a separate elicitation pipeline. The documentation explicitly states what has—and has not—been demonstrated.</p>
+  <div class="tech-stack-wrap"><span class="tech-tag">Python</span><span class="tech-tag">Model inspection</span><span class="tech-tag">Research</span></div>
+  <div class="project-link-group"><a class="project-link" href="https://github.com/god88844-hub/universal-decoder" target="_blank" rel="noopener noreferrer">View source ↗</a><button type="button" class="project-link details-trigger" data-name="Universal Decoder" data-summary="A research repository with model-file inspection tools and a separate elicitation pipeline. The documentation explicitly states what has—and has not—been demonstrated." data-status="Research · ongoing" data-url="https://github.com/god88844-hub/universal-decoder">Details +</button></div>
+</article></div>
+ <p class="project-note">Decorative cosmic illustrations are not application screenshots. Open the Google Play listings for genuine product imagery. Private app source is not presented as open-source.</p>
+</section>
+
+    <!-- Space Background Music Player -->
+    <section class="bgm-panel" id="interactive"><div class="bgm-info"><div class="bgm-icon-glowing" aria-hidden="true">🪐</div><div class="bgm-text"><span class="highlight-badge neon">INTERACTIVE EXAMPLE</span><h4>Ten-Second Tap Challenge</h4><p>A small browser experiment inspired by Tap Speed, not the complete Android game.</p><a class="project-secondary" href="https://play.google.com/store/apps/details?id=com.god88.tap_slice" target="_blank" rel="noopener noreferrer">Get the real Android game ↗</a></div></div><div class="tap-game"><div class="tap-metrics"><div><b id="tap-time">10.0</b><small>SECONDS</small></div><div><b id="tap-count">0</b><small>TAPS</small></div><div><b id="tap-rate">0.0</b><small>TAPS / SECOND</small></div></div><button id="tap-target" type="button" disabled>Press Start to play</button><button class="btn btn-primary" id="tap-start" type="button">Start Challenge</button><p class="tap-feedback" id="tap-feedback" aria-live="polite">Your reflexes, your score. No account needed.</p></div></section>
+
+    <!-- Telemetry Coordinates -->
+    <section class="contact-section" id="contact"><div class="contact-card"><h2>Establish Telemetry Connection</h2><p>Explore the real code and published apps, or follow along as the next desktop engineering tools take shape.</p><div class="contact-grid"><a href="https://github.com/god88844-hub" target="_blank" rel="noopener noreferrer" class="contact-item-btn">Primary GitHub ↗</a><a href="https://github.com/saikumar1982" target="_blank" rel="noopener noreferrer" class="contact-item-btn">Earlier Repositories ↗</a></div><p class="contact-small">Contact and support details for my Android apps are listed on Google Play.</p></div></section>
+  </main>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="highlight-badge neon" id="dialog-status">Project</span><button class="dialog-close" type="button" id="dialog-close" aria-label="Close details">×</button></div><h2 id="dialog-title">Project</h2><p id="dialog-summary"></p><p>Each app is linked to its real Google Play listing, and each source link points to the actual public repository. Cosmic illustrations are decorative previews.</p><a class="btn btn-primary dialog-action" id="dialog-link" href="https://github.com/god88844-hub" rel="noopener noreferrer" target="_blank">Explore ↗</a></dialog>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Teja ManiKumar</p>
     </div>
-    <div class="project-body"><div class="project-header"><span class="project-category">Gaming utility · AimForge project</span><span class="project-status"><i aria-hidden="true"></i>Published</span></div>
-    <div class="app-title-row"><div class="app-icon"><span>FF</span></div><h3 class="project-title">FF AI</h3></div>
-    <p class="project-desc">A sensitivity coaching companion with guided adjustment, loadout considerations, and natural-language guidance described in its Play Store listing. An independent settings tool, not a game modification.</p><div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">Coaching</span><span class="tech-tag">Gaming</span></div>
-    <div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.aimforge.aimforge_ai">View on Google Play <span aria-hidden="true">↗</span></a><button type="button" class="action-secondary preview-btn" data-id="1" aria-label="View details and store link for FF AI">More details <span aria-hidden="true">＋</span></button></div></div></article>
-<article class="project-card app-card theme-sand" data-category="apps" data-search="Snap Notes Productivity Turns screenshots into organized notes and checklists. Choose an image, write what matters, add tags, and search your saved notes locally—no account or cloud backend in this release. Flutter Local-first Notes" data-id="2">
-    <div class="app-art" aria-label="Illustrated preview of Snap Notes">
-      <span class="art-glow"></span><div class="phone-frame phone-first"><div class="screen-art"><span class="screen-top">● ● ●</span><span class="screen-hero">✦</span><i></i><i></i><i></i><i></i><span class="screen-cta">EXPLORE</span></div></div>
-      <div class="phone-frame phone-second"><div class="screen-art second-art"><span class="screen-top">● ● ●</span><span class="screen-hero">◈</span><i></i><i></i><i></i><i></i><span class="screen-cta">DISCOVER</span></div></div>
-      <span class="art-caption">Illustrative product artwork</span>
-    </div>
-    <div class="project-body"><div class="project-header"><span class="project-category">Productivity</span><span class="project-status"><i aria-hidden="true"></i>Published</span></div>
-    <div class="app-title-row"><div class="app-icon"><span>SN</span></div><h3 class="project-title">Snap Notes</h3></div>
-    <p class="project-desc">Turns screenshots into organized notes and checklists. Choose an image, write what matters, add tags, and search your saved notes locally—no account or cloud backend in this release.</p><div class="tech-stack-wrap"><span class="tech-tag">Flutter</span><span class="tech-tag">Local-first</span><span class="tech-tag">Notes</span></div>
-    <div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.god88.snapnotes">View on Google Play <span aria-hidden="true">↗</span></a><button type="button" class="action-secondary preview-btn" data-id="2" aria-label="View details and store link for Snap Notes">More details <span aria-hidden="true">＋</span></button></div></div></article>
-<article class="project-card app-card theme-gold" data-category="games" data-search="Tap Speed Reflex game A quick-play tapping challenge: race the clock, test your reflexes, and chase a better score across time modes. Try the original on Google Play—or the small browser challenge below. Android Arcade Reflex" data-id="3">
-    <div class="app-art" aria-label="Illustrated preview of Tap Speed">
-      <span class="art-glow"></span><div class="phone-frame phone-first"><div class="screen-art"><span class="screen-top">● ● ●</span><span class="screen-hero">✦</span><i></i><i></i><i></i><i></i><span class="screen-cta">EXPLORE</span></div></div>
-      <div class="phone-frame phone-second"><div class="screen-art second-art"><span class="screen-top">● ● ●</span><span class="screen-hero">◈</span><i></i><i></i><i></i><i></i><span class="screen-cta">DISCOVER</span></div></div>
-      <span class="art-caption">Illustrative product artwork</span>
-    </div>
-    <div class="project-body"><div class="project-header"><span class="project-category">Reflex game</span><span class="project-status"><i aria-hidden="true"></i>Published</span></div>
-    <div class="app-title-row"><div class="app-icon"><span>TA</span></div><h3 class="project-title">Tap Speed</h3></div>
-    <p class="project-desc">A quick-play tapping challenge: race the clock, test your reflexes, and chase a better score across time modes. Try the original on Google Play—or the small browser challenge below.</p><div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">Arcade</span><span class="tech-tag">Reflex</span></div>
-    <div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.god88.tap_slice">View on Google Play <span aria-hidden="true">↗</span></a><button type="button" class="action-secondary preview-btn" data-id="3" aria-label="View details and store link for Tap Speed">More details <span aria-hidden="true">＋</span></button></div></div></article>
-<article class="project-card app-card theme-lilac" data-category="games" data-search="Math Nest Educational game A gentle, offline early-math game for children under eight, with 100 short puzzles across five worlds covering counting, patterns, arithmetic, and number confidence. Android 100 puzzles Offline" data-id="4">
-    <div class="app-art" aria-label="Illustrated preview of Math Nest">
-      <span class="art-glow"></span><div class="phone-frame phone-first"><div class="screen-art"><span class="screen-top">● ● ●</span><span class="screen-hero">✦</span><i></i><i></i><i></i><i></i><span class="screen-cta">EXPLORE</span></div></div>
-      <div class="phone-frame phone-second"><div class="screen-art second-art"><span class="screen-top">● ● ●</span><span class="screen-hero">◈</span><i></i><i></i><i></i><i></i><span class="screen-cta">DISCOVER</span></div></div>
-      <span class="art-caption">Illustrative product artwork</span>
-    </div>
-    <div class="project-body"><div class="project-header"><span class="project-category">Educational game</span><span class="project-status"><i aria-hidden="true"></i>Published</span></div>
-    <div class="app-title-row"><div class="app-icon"><span>MA</span></div><h3 class="project-title">Math Nest</h3></div>
-    <p class="project-desc">A gentle, offline early-math game for children under eight, with 100 short puzzles across five worlds covering counting, patterns, arithmetic, and number confidence.</p><div class="tech-stack-wrap"><span class="tech-tag">Android</span><span class="tech-tag">100 puzzles</span><span class="tech-tag">Offline</span></div>
-    <div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.god88.numbernest">View on Google Play <span aria-hidden="true">↗</span></a><button type="button" class="action-secondary preview-btn" data-id="4" aria-label="View details and store link for Math Nest">More details <span aria-hidden="true">＋</span></button></div></div></article>
-<article class="project-card repo-card theme-cyan" data-category="systems" data-search="MEG · Agent CLI Terminal software A native terminal agent harness built with Rust and a Bun control plane. It connects local and cloud model providers, with workspaces, sessions, tools, and explicit action modes. Rust Bun Windows"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="terminal-preview"><div class="terminal-dots"><i></i><i></i><i></i><span>MEG / terminal</span></div><p><b>›</b> /workspace</p><p><b>›</b> inspect repository</p><p><em>●</em> model connected</p><p class="terminal-muted">▌ awaiting task...</p></div></div><div class="project-body"><div class="project-header"><span class="project-category">Terminal software</span><span class="project-status">In development</span></div><h3 class="project-title">MEG · Agent CLI</h3><p class="project-desc">A native terminal agent harness built with Rust and a Bun control plane. It connects local and cloud model providers, with workspaces, sessions, tools, and explicit action modes.</p><div class="tech-stack-wrap"><span class="tech-tag">Rust</span><span class="tech-tag">Bun</span><span class="tech-tag">Windows</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/god88844-hub/MEG">Explore repository <span aria-hidden="true">↗</span></a><a class="action-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/god88844-hub/MEG/releases">Releases <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-violet" data-category="systems" data-search="Aerodynamics Lab Flight simulation A desktop engineering lab for exploring and testing flying machines. Its validation-first roadmap distinguishes simulated evidence from real-world flight qualification. Godot Python Simulation"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="aero-preview"><div class="aero-ring one"></div><div class="aero-ring two"></div><span class="aero-cross">✧</span><div class="aero-horizon"></div><span class="aero-label">FLIGHT / VALIDATION LAB</span></div></div><div class="project-body"><div class="project-header"><span class="project-category">Flight simulation</span><span class="project-status">In development</span></div><h3 class="project-title">Aerodynamics Lab</h3><p class="project-desc">A desktop engineering lab for exploring and testing flying machines. Its validation-first roadmap distinguishes simulated evidence from real-world flight qualification.</p><div class="tech-stack-wrap"><span class="tech-tag">Godot</span><span class="tech-tag">Python</span><span class="tech-tag">Simulation</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/god88844-hub/aerodynamics-lab">Explore repository <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-gold" data-category="systems" data-search="Electrophysics Lab Computing simulation An experimental environment for studying computing designs, logic, circuits, and chip concepts—with model assumptions and physical validation limits made explicit. JavaScript Rust Research"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="chip-preview"><div class="chip-traces"></div><div class="chip-core"><span>0101</span><b>∑</b><span>1010</span></div><span class="chip-label">COMPUTE / EXPERIMENT</span></div></div><div class="project-body"><div class="project-header"><span class="project-category">Computing simulation</span><span class="project-status">Research software</span></div><h3 class="project-title">Electrophysics Lab</h3><p class="project-desc">An experimental environment for studying computing designs, logic, circuits, and chip concepts—with model assumptions and physical validation limits made explicit.</p><div class="tech-stack-wrap"><span class="tech-tag">JavaScript</span><span class="tech-tag">Rust</span><span class="tech-tag">Research</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/god88844-hub/electrophysics-lab">Explore repository <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-cyan" data-category="systems" data-search="CrowdSync Local audio system Android-first Flutter project for synchronized audio rooms over local Wi-Fi or a hotspot, using Nearby Connections and a native Kotlin timing module. Flutter Kotlin Nearby"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="wave-preview"><div class="wave-circle"><span>♫</span></div><div class="wave-lines">▂▅▇▃▆▂▅▇▅▂▆▃▂▅▇</div><span>LOCAL CONNECTION • SYNC</span></div></div><div class="project-body"><div class="project-header"><span class="project-category">Local audio system</span><span class="project-status">Prototype</span></div><h3 class="project-title">CrowdSync</h3><p class="project-desc">Android-first Flutter project for synchronized audio rooms over local Wi-Fi or a hotspot, using Nearby Connections and a native Kotlin timing module.</p><div class="tech-stack-wrap"><span class="tech-tag">Flutter</span><span class="tech-tag">Kotlin</span><span class="tech-tag">Nearby</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/saikumar1982/CrowdSync">Explore repository <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-ember" data-category="systems" data-search="Where Is My Bus Transit application A Visakhapatnam bus-tracking project organized around stops, route search, journey timelines, and an opt-in location-sharing beacon. Flutter Transit Maps-free UI"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="bus-preview"><div class="bus-route"><span>01</span><span class="bus-route-line"></span><span>08</span></div><div class="bus-panel"><b>VIZAG / ROUTES</b><span>Stop → Journey → Arrival</span><div>◉  <i></i>  ◉  <i></i>  ◎</div></div></div></div><div class="project-body"><div class="project-header"><span class="project-category">Transit application</span><span class="project-status">In development</span></div><h3 class="project-title">Where Is My Bus</h3><p class="project-desc">A Visakhapatnam bus-tracking project organized around stops, route search, journey timelines, and an opt-in location-sharing beacon.</p><div class="tech-stack-wrap"><span class="tech-tag">Flutter</span><span class="tech-tag">Transit</span><span class="tech-tag">Maps-free UI</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/god88844-hub/where-is-my-bus">Explore repository <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-sand" data-category="web" data-search="Trinkets Shore Web design An early jewelry storefront experiment. Inspect the actual HTML and assets in the public repository rather than an unrelated example site. HTML CSS Storefront"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="store-preview"><span class="store-shape"></span><span class="store-gem">◇</span><b>TRINKETS — SHORE</b><small>Jewelry / web interface</small></div></div><div class="project-body"><div class="project-header"><span class="project-category">Web design</span><span class="project-status">Source available</span></div><h3 class="project-title">Trinkets Shore</h3><p class="project-desc">An early jewelry storefront experiment. Inspect the actual HTML and assets in the public repository rather than an unrelated example site.</p><div class="tech-stack-wrap"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Storefront</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/saikumar1982/store">Explore repository <span aria-hidden="true">↗</span></a><a class="action-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/saikumar1982/store/blob/main/trinkets.html">View HTML <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-violet" data-category="web" data-search="Level-Up Experiments Web experiments A collection of early interactive HTML experiments, including a solar-system page and an Iron Man-inspired page. HTML CSS JavaScript"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="solar-preview"><i class="solar-orbit s1"></i><i class="solar-orbit s2"></i><i class="solar-orbit s3"></i><span class="solar-sun"></span><span class="solar-planet"></span><small>HTML experiments / orbit</small></div></div><div class="project-body"><div class="project-header"><span class="project-category">Web experiments</span><span class="project-status">Source available</span></div><h3 class="project-title">Level-Up Experiments</h3><p class="project-desc">A collection of early interactive HTML experiments, including a solar-system page and an Iron Man-inspired page.</p><div class="tech-stack-wrap"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/saikumar1982/Level-Up">Explore repository <span aria-hidden="true">↗</span></a><a class="action-secondary" target="_blank" rel="noopener noreferrer" href="demos/solar-system.html">Launch solar demo <span aria-hidden="true">↗</span></a></div></div></article>
-<article class="project-card repo-card theme-cyan" data-category="systems" data-search="Universal Decoder AI research A research repository with model-file inspection tools and a separate elicitation pipeline. The documentation explicitly states what has—and has not—been demonstrated. Python Model inspection Research"><div class="repo-art"><span class="visual-disclaimer">Illustrative visual · source linked</span><div class="decoder-preview"><span>MODEL INSPECTION</span><div>0x7f 01001 → tensor</div><div>layers: <b>inspect</b></div><div>claim: <b>bounded</b></div><div>evidence: <b>required</b></div></div></div><div class="project-body"><div class="project-header"><span class="project-category">AI research</span><span class="project-status">Research · ongoing</span></div><h3 class="project-title">Universal Decoder</h3><p class="project-desc">A research repository with model-file inspection tools and a separate elicitation pipeline. The documentation explicitly states what has—and has not—been demonstrated.</p><div class="tech-stack-wrap"><span class="tech-tag">Python</span><span class="tech-tag">Model inspection</span><span class="tech-tag">Research</span></div><div class="project-actions"><a class="action-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/god88844-hub/universal-decoder">Explore repository <span aria-hidden="true">↗</span></a></div></div></article></div></section>
-<section class="interactive-zone" id="interactive"><div class="container lab-layout"><div class="lab-card"><div class="lab-top"><span>INTERACTIVE / BROWSER MINI-GAME</span><span>10 SECOND MODE</span></div><div class="tap-display"><div class="tap-stat"><b id="tap-time">10.0</b><span>Seconds left</span></div><div class="tap-stat"><b id="tap-count">0</b><span>Taps</span></div><div class="tap-stat"><b id="tap-rate">0.0</b><span>Taps / second</span></div></div><button id="tap-target" type="button" disabled>Press Start to play</button><button id="tap-start" type="button">Start the 10-second challenge</button><p id="tap-feedback" class="lab-note" aria-live="polite">A small browser experiment inspired by the idea of Tap Speed, not the Android game itself.</p></div><div class="lab-copy"><div class="lab-sublabel">02 / Try something</div><h2>Don't just scroll.<br>Play for a moment.</h2><p>Tap as fast as you can in ten seconds. This self-contained demo runs in your browser, with no account or downloads. The actual Android game has its own modes and leaderboard; visit Google Play to see the released experience.</p><a href="https://play.google.com/store/apps/details?id=com.god88.tap_slice" target="_blank" rel="noopener noreferrer">View the real Tap Speed game ↗</a></div></div></section>
-<section class="about-section" id="about"><div class="container"><div class="section-head"><span class="section-kicker">03 / About the maker</span><h2>Curious by nature.<br>Practical by choice.</h2><p>My interests move between polished mobile products, interactive interfaces, native tooling, and validation-minded engineering software. The common thread is learning by building, testing, and publishing.</p></div><div class="about-grid"><div class="about-panel"><h3>What I'm building now</h3><p>MEG explores local-first agent workflows. Aerodynamics Lab and Electrophysics Lab explore simulation-backed engineering with explicit limits on what the models can prove.</p><ul class="focus-list"><li><strong>Products</strong> Android apps and small games</li><li><strong>Tooling</strong> Rust-based CLI workflows</li><li><strong>Research</strong> desktop simulation and validation</li></ul></div><div class="about-panel"><h3>How I like to work</h3><p>I care about a visible result, a link people can actually follow, and descriptions that don't oversell what's finished. Public repositories contain the implementation details and current limits of experimental work.</p><ul class="focus-list"><li><strong>Background</strong> Undergraduate studies at Sri Balaji Degree College</li><li><strong>Outside code</strong> Competitive boxing and logic puzzles</li><li><strong>Location</strong> Visakhapatnam, India</li></ul></div></div></div></section>
-<section class="contact-section container" id="contact"><div class="contact-panel"><span class="section-kicker">04 / Get in touch</span><h2>Have something in mind?</h2><p>Interested in the apps, collaboration, an open-source project, or a technical discussion? Find the developer contact details on Google Play, or browse my public work directly.</p><div class="contact-links"><a class="btn btn-primary" href="https://github.com/god88844-hub" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a><a class="btn btn-secondary" href="https://github.com/god88844-hub" target="_blank" rel="noopener noreferrer">Main GitHub ↗</a><a class="btn btn-secondary" href="https://github.com/saikumar1982" target="_blank" rel="noopener noreferrer">Other GitHub ↗</a><a class="btn btn-secondary" href="resume.txt" target="_blank" rel="noopener noreferrer">Text résumé ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Teja ManiKumar · Built with HTML, CSS &amp; JavaScript</span><span>Space canvas is an illustration, not a physical simulation. <a href="#home">Back to orbit ↑</a></span></div></footer></div>
-<dialog id="screenshot-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><h2 id="dialog-title">Project screenshots</h2><button type="button" class="dialog-close" id="dialog-close" aria-label="Close screenshots">×</button></div><p class="dialog-copy">The artwork on this site is illustrative, not a screenshot. Open the verified store listing to see the real application screens, feature descriptions and latest release details.</p><div class="dialog-images" id="dialog-images"></div><div class="dialog-actions"><a id="dialog-store" href="#" target="_blank" rel="noopener noreferrer">View official screenshots ↗</a></div></dialog>
-<script>
+  </footer>
+
+  <!-- ----------------------------------------------------
+       Twinkling Star Field Engine - Custom JavaScript
+       ---------------------------------------------------- -->
+  <script>
     const canvas = document.getElementById('particles-canvas');
     const ctx = canvas.getContext('2d');
     
@@ -447,86 +1518,55 @@ dialog{border:1px solid rgba(134,205,227,.34);background:#091123;color:white;bor
     }
 
     initHeroCosmos();
+    setTimeout(initHeroCosmos, 200);
     animateHeroCosmos();
 
+    // ----------------------------------------------------
 
-    // Accessible project filters and search. Unknown/empty queries don't hide the page content permanently.
-    const projectCards = [...document.querySelectorAll('.project-card')];
-    const filterButtons = [...document.querySelectorAll('.filter-btn')];
-    const searchInput = document.getElementById('project-search');
-    let activeFilter = 'all';
-    function applyFilters() {
-      const q = searchInput.value.trim().toLocaleLowerCase(); let count = 0;
-      for (const card of projectCards) {
-        const visible = (activeFilter === 'all' || card.dataset.category === activeFilter) && (card.dataset.search.toLocaleLowerCase().includes(q));
-        card.hidden = !visible; if (visible) count++;
+    // Search and filters reuse the ORIGINAL cosmic-card layout and classes.
+    const filterButtons=document.querySelectorAll('.filter-btn');
+    const projectCards=Array.from(document.querySelectorAll('.project-card'));
+    const projectSearch=document.getElementById('project-search');
+    const projectCount=document.getElementById('project-count');
+    function updateProjects(){
+      const filter=document.querySelector('.filter-btn.active')?.dataset.filter||'all';
+      const query=projectSearch.value.toLowerCase().trim();
+      let visible=0;
+      for(const card of projectCards){
+        const show=(filter==='all'||card.dataset.category===filter)&&(!query||card.dataset.search.includes(query));
+        card.hidden=!show;
+        if(show)visible++;
       }
-      document.getElementById('project-count').textContent = `${count} project${count === 1 ? '' : 's'} to explore`;
+      projectCount.textContent=visible+(visible===1?' project in orbit':' projects in orbit');
     }
-    filterButtons.forEach(btn => btn.addEventListener('click', () => {
-      activeFilter = btn.dataset.filter;
-      filterButtons.forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-pressed', String(b === btn)); });
-      applyFilters();
-    }));
-    searchInput.addEventListener('input', applyFilters);
-    applyFilters();
-    const screenshots = [{"title":"FF Sensi AI","url":"https://play.google.com/store/apps/details?id=com.ffsensiai.app"},{"title":"FF AI","url":"https://play.google.com/store/apps/details?id=com.aimforge.aimforge_ai"},{"title":"Snap Notes","url":"https://play.google.com/store/apps/details?id=com.god88.snapnotes"},{"title":"Tap Speed","url":"https://play.google.com/store/apps/details?id=com.god88.tap_slice"},{"title":"Math Nest","url":"https://play.google.com/store/apps/details?id=com.god88.numbernest"}];
-    const projectDialog = document.getElementById('screenshot-dialog');
-    const dialogImages = document.getElementById('dialog-images');
-    const dialogTitle = document.getElementById('dialog-title');
-    const dialogStore = document.getElementById('dialog-store');
-    const dialogClose = document.getElementById('dialog-close');
-    let lastTrigger;
-    document.querySelectorAll('.preview-btn').forEach(button => button.addEventListener('click', () => {
-      const item = screenshots[Number(button.dataset.id)]; if (!item) return;
-      lastTrigger = button; dialogTitle.textContent = item.title + ' · store details';
-      dialogImages.replaceChildren();
-      const info = document.createElement('p'); info.className='dialog-hint';
-      info.textContent = `View ${item.title}'s actual screenshots and listing on Google Play. This portfolio does not copy or fabricate the app screens.`;
-      dialogImages.appendChild(info);
-      dialogStore.href = item.url; projectDialog.showModal(); dialogClose.focus();
-    }));
-    dialogClose.addEventListener('click', () => projectDialog.close());
-    projectDialog.addEventListener('click', e => { if (e.target === projectDialog) projectDialog.close(); });
-    projectDialog.addEventListener('close', () => lastTrigger?.focus());
-
-    // Local-only ten-second reflex demo; never claims to be the actual Android product.
-    const startButton = document.getElementById('tap-start');
-    const tapTarget = document.getElementById('tap-target');
-    const timeText = document.getElementById('tap-time');
-    const countText = document.getElementById('tap-count');
-    const rateText = document.getElementById('tap-rate');
-    const feedback = document.getElementById('tap-feedback');
-    let startAt = 0, taps = 0, timerId = null, running = false;
-    function finishTap() {
-      if (!running) return;
-      running = false; clearInterval(timerId); timerId = null;
-      tapTarget.disabled = true; tapTarget.textContent = `Finished! ${taps} taps`;
-      timeText.textContent = '0.0'; rateText.textContent = (taps / 10).toFixed(1);
-      feedback.textContent = `You made ${taps} taps in ten seconds. Want another attempt?`;
-      startButton.disabled = false; startButton.textContent = 'Try again';
-    }
-    function updateTapTime() {
-      if (!running) return;
-      const elapsed = Math.max(0, (performance.now() - startAt) / 1000);
-      timeText.textContent = Math.max(0, 10 - elapsed).toFixed(1);
-      rateText.textContent = (elapsed ? taps / elapsed : 0).toFixed(1);
-      if (elapsed >= 10) finishTap();
-    }
-    startButton.addEventListener('click', () => {
-      if (timerId) clearInterval(timerId);
-      taps = 0; running = true; startAt = performance.now();
-      timeText.textContent = '10.0'; countText.textContent = '0'; rateText.textContent = '0.0';
-      tapTarget.disabled = false; tapTarget.textContent = 'TAP HERE!';
-      feedback.textContent = 'The countdown is live. Mouse clicks, taps, and keyboard activation all count.';
-      startButton.disabled = true; timerId = setInterval(updateTapTime, 40);
-      tapTarget.focus();
+    for(const btn of filterButtons)btn.addEventListener('click',()=>{
+      for(const b of filterButtons){b.classList.remove('active');b.setAttribute('aria-pressed','false');}
+      btn.classList.add('active');btn.setAttribute('aria-pressed','true');updateProjects();
     });
-    tapTarget.addEventListener('click', () => {
-      if (!running) return;
-      if ((performance.now() - startAt) >= 10000) return finishTap();
-      taps++; countText.textContent = String(taps); rateText.textContent = (taps / Math.max(0.05,(performance.now()-startAt)/1000)).toFixed(1);
+    projectSearch.addEventListener('input',updateProjects);
+    const dialog=document.getElementById('project-dialog');
+    for(const btn of document.querySelectorAll('.details-trigger'))btn.addEventListener('click',()=>{
+      document.getElementById('dialog-title').textContent=btn.dataset.name;
+      document.getElementById('dialog-status').textContent=btn.dataset.status;
+      document.getElementById('dialog-summary').textContent=btn.dataset.summary;
+      const link=document.getElementById('dialog-link');link.href=btn.dataset.url;
+      link.textContent=btn.dataset.url.includes('play.google.com')?'See real app on Google Play ↗':'Browse project source ↗';
+      dialog.showModal();
     });
-    document.getElementById('year').textContent = String(new Date().getFullYear());
+    document.getElementById('dialog-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+    const navToggle=document.getElementById('mobile-nav-toggle');
+    const navLinks=document.querySelector('.nav-links');
+    navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('mobile-open');navToggle.setAttribute('aria-expanded',String(open));});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('mobile-open');navToggle.setAttribute('aria-expanded','false');}));
+    const tapStart=document.getElementById('tap-start'),tapTarget=document.getElementById('tap-target');
+    const tapCount=document.getElementById('tap-count'),tapTime=document.getElementById('tap-time'),tapRate=document.getElementById('tap-rate');
+    let tapStarted=0,taps=0,tapTimer=null;
+    function renderTap(){const elapsed=Math.max(0,(performance.now()-tapStarted)/1000),remaining=Math.max(0,10-elapsed);tapTime.textContent=remaining.toFixed(1);tapRate.textContent=(taps/Math.max(.1,Math.min(elapsed,10))).toFixed(1);
+      if(remaining<=0){clearInterval(tapTimer);tapTimer=null;tapTarget.disabled=true;tapTarget.textContent='Time is up';tapStart.disabled=false;tapStart.textContent='Play Again';document.getElementById('tap-feedback').textContent='Finished: '+taps+' taps in 10 seconds.';}}
+    tapStart.addEventListener('click',()=>{clearInterval(tapTimer);taps=0;tapStarted=performance.now();tapCount.textContent='0';tapTime.textContent='10.0';tapRate.textContent='0.0';tapTarget.disabled=false;tapTarget.textContent='TAP HERE';tapStart.disabled=true;tapTimer=setInterval(renderTap,50);});
+    tapTarget.addEventListener('click',()=>{if(tapTarget.disabled)return;if(performance.now()-tapStarted>=10000){renderTap();return;}taps++;tapCount.textContent=String(taps);renderTap();});
 
-</script></body></html>
+  </script>
+</body>
+</html>

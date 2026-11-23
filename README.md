@@ -1,31 +1,33 @@
-# Teja ManiKumar · Portfolio
+# Teja ManiKumar · Cosmic Portfolio
 
-A space-themed, responsive portfolio featuring direct links to five published Android apps and games, and the developer's public source repositories.
+This is a **theme-faithful restoration**, not a visual redesign. The original user-supplied HTML portfolio is the styling and layout foundation.
 
-The orbital canvas is a visual illustration—not a scientific orbital simulator. The ten-second Tap Speed browser challenge is a separate miniature demonstration, not a port of the Android game. The solar demo reproduces an actual early HTML example from the developer's public `saikumar1982/Level-Up` repository.
+## Visual identity intentionally preserved
 
-## Run
+- The **entire first CSS stylesheet** is byte-for-byte identical to the original uploaded portfolio source.
+- The original deep-space photo reference: `media/another space img.jpg`, already retained in the repository.
+- Original palette: cyan `#00f2ff`, purple `#bd93f9`, gold `#ffcc00`, and pink `#ff79c6`.
+- Original orbiting solar-system hero, twinkling star canvas, translucent project cards, typography, stat bar, educational section, and visual rhythm.
+- Additional functional elements are scoped to a **second stylesheet** using the original color variables.
 
-This is a static website. Open `index.html` or serve the repository root with any static file server:
+## Functional improvements
+
+- Corrected owner name: **Teja ManiKumar**, including metadata and page title.
+- 5 direct Google Play releases, 8 actual public source repositories across both GitHub accounts.
+- 13 searchable/filterable cosmic project cards and project details dialog.
+- 10-second tapping mini-game (a browser example, not a copy of the full Android game).
+- Launchable original solar-system HTML demo at `demos/solar-system.html`.
+- Responsive mobile navigation and accurate project descriptions.
+- No links to unrelated TejaAlla repositories or invented contact information.
+
+Card visuals are decorative **not actual app screenshots**; official product imagery is available on Google Play. Research software is not represented as physically validated.
+
+## Run and verify
+
+This is a static HTML site. Open `index.html` or serve it using a static web server. Run:
 
 ```bash
-python -m http.server 8000
+npm test
 ```
 
-Then visit `http://localhost:8000`.
-
-## Project/link policy
-
-- Google Play app cards link to the precise package IDs supplied by the developer; no source button is shown for private/unverified code.
-- Public repository cards link only to the verified repository for that project, not a generic profile.
-- App and repository visuals are clearly labelled **illustrative**. Official app screenshots are accessed on each Google Play listing; none are fabricated or scraped.
-- Research projects are described as *in progress*, with no unsupported claims about physical validation.
-- `media/another space img.jpg` is the existing space background from the original portfolio; the site's CSS and canvas continue to work without it.
-- A legacy music file remains in the repo for history, but is intentionally not embedded in the revised website because redistribution rights were not verified.
-
-## Checks
-
-Run `node --test tests/portfolio.test.mjs` to check names, links, card inventory and classifications without network access. For browser interactions, see `tests/browser-check.mjs` (uses Playwright if installed).
-## Live example
-
-`demos/solar-system.html` is copied from [`saikumar1982/Level-Up/solarsystem.html`](https://github.com/saikumar1982/Level-Up/blob/main/solarsystem.html), as a standalone example that visitors can launch without leaving the portfolio. This animated scene is not a scientific simulator.
+The GitHub workflow runs these checks on PRs and pushes to `main`.
