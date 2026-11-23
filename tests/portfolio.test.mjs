@@ -26,7 +26,7 @@ test('Eight authentic repositories',()=>{
 test('Thirteen discoverable projects and playable paths',()=>{
  assert.equal((html.match(/class="project-card"/g)||[]).length,13);
  for(const s of ['id="project-search"','data-filter="games"','id="project-dialog"','id="tap-start"','id="tap-target"','href="demos/solar-system.html"'])assert.ok(html.includes(s),s);
- assert.ok(html.includes('id="cosmic-audio"'));
+ assert.match(html,/<audio\\b[^>]*id="cosmic-audio"/);
  assert.ok(html.includes('media/audio khaleja.mp3'));
- assert.ok(html.includes('id="hero-cosmos-3d"'));
+ assert.doesNotMatch(html,/hero-cosmos-3d|js\\/cosmic-three\\.mjs/);
 });
